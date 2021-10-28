@@ -180,6 +180,7 @@ const workForm = () => {
         if (undefined.querySelector('input[type="email"]').hasAttribute('style')) {
           evt.preventDefault();
         }
+        localStorage.setItem('tel', undefined.querySelector('input[type="email"]').value);
       });
     };
     checkMailField();

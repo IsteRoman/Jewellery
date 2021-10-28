@@ -3,6 +3,7 @@
   padding-bottom: 19px;
 
   @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
+    z-index: 2;
     padding-bottom: 30px;
 
     .no-js &,
@@ -20,6 +21,7 @@
   }
 
   @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
+    z-index: 2;
     padding-top: 20px;
     padding-bottom: 20px;
 
@@ -91,6 +93,22 @@
   }
 }
 
+.header__logo--on-main-page {
+  cursor: default;
+
+  &:focus {
+    opacity: 1;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:active {
+    opacity: 1;
+  }
+}
+
 .header__basket {
   display: flex;
   flex-shrink: 0;
@@ -139,8 +157,20 @@
     color: $dark;
   }
 
+  p {
+    &:focus,
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
+  }
+
   b {
     margin-left: 5px;
+    cursor: default;
   }
 
   @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
@@ -375,6 +405,15 @@
   color: $dark;
   line-height: 1;
 
+  &:focus,
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+
   @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
     font-size: 24px;
     color: $white;
@@ -415,6 +454,15 @@
   font-weight: 500;
   color: $white-0-75;
   line-height: 1;
+
+  &:focus,
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
 }
 
 .header__navigation-login {
@@ -425,6 +473,15 @@
   line-height: 1;
   font-weight: 500;
   color: $dark;
+
+  &:focus,
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
 
   @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
     position: unset;
