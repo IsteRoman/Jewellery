@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html class="page" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="jewelery shop">
+    <title>Jewellery</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="img/favicon/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicon/apple.png">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="stylesheet" href="css/style.min.css" rel="stylesheet">
+    <link rel="preload" href="fonts/cormorantgaramond-bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/cormorantgaramond-semibold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/cormorantgaramond-italic.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/poppins-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/poppins-medium.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/poppins-bold.woff2" as="font" type="font/woff2" crossorigin>
+  </head>
+  <body class="no-js">
+    <div class="visually-hidden">
+      <include src="build/img/sprite_auto.svg"></include>
+    </div>
+    <header class="header">
+      <div class="header__block wrapper">
+        <a class="header__logo" href="index.html" aria-label="On main page">
+          <svg class="header__logo-icon" width="66" height="66" viewBox="0 0 66 66">
+            <use href="#icon-logo"></use>
+          </svg>
+        </a>
+        <button class="header__button" type="button" aria-label="Open menu">
+          <svg class="header__button-icon" width="25" height="16" viewBox="0 0 25 18">
+            <use href="#icon-menu"></use>
+          </svg>
+        </button>
+        <a class="header__basket" href="#" aria-label="Open basket">
+          <svg class="header__basket-icon" width="18" height="16" viewBox="0 0 20 18">
+            <use href="#icon-basket"></use>
+          </svg>
+          <div class="header__basket-text-content">
+            <p>Cart</p>
+            <b>0</b>
+          </div>
+        </a>
+        <div class="header__navigation">
+          <div class="header__navigation-search">
+            <button class="header__navigation-search-button" type="submit" aria-label="Search">
+              <svg class="header__navigation-search-button-icon" width="14" height="14" viewBox="0 0 14 14">
+                <use href="#icon-search"></use>
+              </svg>
+            </button>
+            <label class="visually-hidden" for="search_field">Search field</label>
+            <input id="search_field" name="search-field" type="search" placeholder="Type here to search">
+          </div>
+          <ul class="header__navigation-nav-list">
+            <li class="header__navigation-nav-item">
+              <a class="header__navigation-nav-link" href="#">
+                What’s new
+              </a>
+            </li>
+            <li class="header__navigation-nav-item">
+              <a class="header__navigation-nav-link" href="catalog.html">
+                Chokers
+              </a>
+            </li>
+            <li class="header__navigation-nav-item">
+              <a class="header__navigation-nav-link" href="catalog.html">
+                Necklaces
+              </a>
+            </li>
+            <li class="header__navigation-nav-item">
+              <a class="header__navigation-nav-link" href="catalog.html">
+                Rings
+              </a>
+            </li>
+            <li class="header__navigation-nav-item">
+              <a class="header__navigation-nav-link" href="catalog.html">
+                Earrings
+              </a>
+            </li>
+          </ul>
+          <ul class="header__navigation-about-list">
+            <li class="header__navigation-about-item">
+              <a class="header__navigation-about-link" href="#">
+                About CH
+              </a>
+            </li>
+            <li class="header__navigation-about-item">
+              <a class="header__navigation-about-link" href="#">
+                Stores & Hours
+              </a>
+            </li>
+            <li class="header__navigation-about-item">
+              <a class="header__navigation-about-link" href="#">
+                Contact Us
+              </a>
+            </li>
+          </ul>
+          <a class="header__navigation-login" href="login.html">Login</a>
+        </div>
+      </div>
+    </header>
+
+
+
+
+
+
+
+    <main>
+
+    </main>
+
+
+    <footer class="footer">
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+    <div class="login">
+      <h2>Log In</h2>
+      <button class="login__button-close" type="button" aria-label="close" tabindex="7">
+        <svg class="login__button-close-icon" width="14" height="14" viewBox="0 0 14 14">
+          <use href="#icon-close"></use>
+        </svg>
+      </button>
+      <form class="login__form" method="GET" action="https://echo.htmlacademy.ru/"tabindex="1" >
+        <label class="visually-hidden" for="user_email_login" aria-label="Your E-mail"></label>
+        <input id="user_email_login" name="user-email-login" type="email" placeholder="Your E-mail" required tabindex="2">
+        <label class="visually-hidden" for="user_password_login" aria-label="Введите ваш номер телефона"></label>
+        <input id="user_password_login" name="user-password-login" type="password" placeholder="Password" required tabindex="3">
+        <a class="login__form-forgot" href="#" tabindex="4">Forgot your password?</a>
+        <button class="login__form-submit" type="submit" tabindex="5">Log In</button>
+        <div class="login__form-new-user">
+          <p>Don’t have an account?</p>
+          <a class="login__form-new-user-sign-up" href="#" tabindex="6">Sign up</a>
+        </div>
+      </form>
+    </div>
+    <div class="visually-hidden success">
+      <p>Форма отправлена</p>
+    </div>
+    <script src="js/vendor.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

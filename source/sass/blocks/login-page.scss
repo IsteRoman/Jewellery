@@ -1,0 +1,32 @@
+.login-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.login-page__logo {
+  transition: $default-transition;
+
+  &:focus,
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.login-page__logo-icon {
+  fill: $brown;
+}
+
+.login-page__login {
+  display: flex;
+  top: 100px;
+
+  & .login__button-close {
+    display: none;
+  }
+}

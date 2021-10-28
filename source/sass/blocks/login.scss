@@ -1,0 +1,227 @@
+.login {
+  position: absolute;
+  top: 100px;
+  left: calc(50% - 215px);
+  z-index: 3;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  width: 430px;
+  height: calc(100% - 100px);
+  max-height: 595px;
+  padding-top: 198px;
+  padding-bottom: 60px;
+  background-color: $light-brown;
+  overflow-y: auto;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 138px;
+    background: url("../img/popup-img.jpg") no-repeat;
+    background-size: cover;
+  }
+
+  h2 {
+    margin: 0;
+    margin-bottom: 45px;
+    padding: 0;
+    font-size: 34px;
+    line-height: 0.65;
+    font-family: "CormorantGaramond", "Arial", sans-serif;
+    font-weight: 700;
+    color: $dark;
+  }
+
+  .popup--open & {
+    display: flex;
+  }
+
+  @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
+    top: 50px;
+    left: calc(50% - 135px);
+    width: 270px;
+    height: calc(100% - 50px);
+    max-height: 480px;
+    padding-top: 129px;
+    padding-bottom: 45px;
+
+    h2 {
+      margin-bottom: 40px;
+    }
+
+    &::before {
+      height: 84px;
+    }
+
+    h2 {
+      margin-bottom: 40px;
+      font-size: 24px;
+    }
+  }
+}
+
+.login__button-close {
+  position: absolute;
+  top: 20px;
+  right: 26px;
+  width: 14px;
+  height: 14px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: $default-transition;
+  outline: 0;
+
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+
+  @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
+    top: 15px;
+    right: 15px;
+  }
+}
+
+.login__button-close-icon {
+  fill: $dark;
+}
+
+.login__form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-left: 45px;
+  padding-right: 45px;
+
+  input {
+    height: 30px;
+    margin-bottom: 40px;
+    padding: 0 12px 9px 0;
+    font-size: 14px;
+    line-height: 1;
+    font-weight: 500;
+    color: $gray;
+    border: none;
+    border-bottom: 1px solid $dark;
+    background: none;
+    outline: 0;
+    transition: $default-transition;
+
+    &::placeholder {
+      color: $gray;
+    }
+
+    &:focus {
+      border-color: $brown;
+    }
+
+    &:focus::placeholder {
+      opacity: 0.5;
+    }
+  }
+
+  @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
+    padding-left: 15px;
+    padding-right: 15px;
+
+    input {
+      margin-bottom: 35px;
+    }
+  }
+}
+
+.login__form-forgot {
+  position: absolute;
+  top: 110px;
+  right: 45px;
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 500;
+  color: $gray;
+
+  &:focus,
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+
+  @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
+    right: 15px;
+  }
+}
+
+.login__form-submit {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 68px;
+  margin-top: 28px;
+  margin-bottom: 20px;
+  padding: 0;
+  font-size: 16px;
+  line-height: 130%;
+  font-weight: 500;
+  color: $white;
+  background-color: $brown;
+  border: none;
+  cursor: pointer;
+
+  &:focus,
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+
+  @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
+    margin-top: 23px;
+  }
+}
+
+.login__form-new-user {
+  align-self: center;
+  display: flex;
+
+  p {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    line-height: 0.75;
+    color: $gray;
+  }
+}
+
+.login__form-new-user-sign-up {
+  margin-left: 5px;
+  font-size: 14px;
+  line-height: 0.75;
+  color: $black;
+
+  &:focus,
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
