@@ -3,6 +3,7 @@ import {workMenu} from './menu.js';
 import {workPopup} from './popup.js';
 import {workForm} from './validation.js';
 import {workAccordion} from './accordion.js';
+import {workFilter} from './filter.js';
 
 const err = 1;
 
@@ -24,7 +25,7 @@ if(document.querySelector('.login')) {
   err + 1;
 }
 
-if(document.querySelector('form')) {
+if(document.querySelector('input[type="email"]')) {
   workForm();
 } else {
   err + 1;
@@ -32,6 +33,12 @@ if(document.querySelector('form')) {
 
 if(document.querySelector('.faq')) {
   workAccordion('.faq__item');
+} else {
+  err + 1;
+}
+
+if(document.querySelector('.filters')) {
+  workFilter();
 } else {
   err + 1;
 }

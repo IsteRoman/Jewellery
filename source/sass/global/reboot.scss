@@ -42,6 +42,10 @@ body {
   height: 100%;
 }
 
+.filter-open {
+  height: 100%;
+}
+
 .popup--open::before {
   content: "";
   position: absolute;

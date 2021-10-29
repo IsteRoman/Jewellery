@@ -26,6 +26,15 @@
 }
 
 @font-face {
+  font-family: "CormorantGaramond";
+  font-display: swap;
+  font-style: italic;
+  font-weight: 500;
+  src: url("../fonts/cormorantgaramond-mediumitalic.woff2") format("woff2"),
+    url("../fonts/cormorantgaramond-mediumitalic.woff") format("woff");
+}
+
+@font-face {
   font-family: "Poppins";
   font-display: swap;
   font-style: normal;

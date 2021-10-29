@@ -13,7 +13,6 @@
     <link rel="preload" href="fonts/cormorantgaramond-bold.woff2" as="font" type="font/woff2" crossorigin="">
     <link rel="preload" href="fonts/cormorantgaramond-semibold.woff2" as="font" type="font/woff2" crossorigin="">
     <link rel="preload" href="fonts/cormorantgaramond-italic.woff2" as="font" type="font/woff2" crossorigin="">
-    <link rel="preload" href="fonts/cormorantgaramond-mediumitalic.woff2" as="font" type="font/woff2" crossorigin="">
     <link rel="preload" href="fonts/poppins-regular.woff2" as="font" type="font/woff2" crossorigin="">
     <link rel="preload" href="fonts/poppins-medium.woff2" as="font" type="font/woff2" crossorigin="">
     <link rel="preload" href="fonts/poppins-bold.woff2" as="font" type="font/woff2" crossorigin="">
@@ -24,7 +23,7 @@
     </div>
     <header class="header">
       <div class="header__block wrapper">
-        <a class="header__logo" href="main.html" aria-label="Jewellery">
+        <a class="header__logo header__logo--on-main-page" aria-label="Jewellery">
           <svg class="header__logo-icon" width="66" height="66" viewBox="0 0 66 66">
             <use href="#icon-logo"></use>
           </svg>
@@ -60,22 +59,22 @@
               </a>
             </li>
             <li class="header__navigation-nav-item">
-              <a class="header__navigation-nav-link" href="#">
+              <a class="header__navigation-nav-link" href="catalog.html">
                 Chokers
               </a>
             </li>
             <li class="header__navigation-nav-item">
-              <a class="header__navigation-nav-link" href="#">
+              <a class="header__navigation-nav-link" href="catalog.html">
                 Necklaces
               </a>
             </li>
             <li class="header__navigation-nav-item">
-              <a class="header__navigation-nav-link" href="#">
+              <a class="header__navigation-nav-link" href="catalog.html">
                 Rings
               </a>
             </li>
             <li class="header__navigation-nav-item">
-              <a class="header__navigation-nav-link" href="#">
+              <a class="header__navigation-nav-link" href="catalog.html">
                 Earrings
               </a>
             </li>
@@ -102,160 +101,175 @@
       </div>
     </header>
     <main>
-      <h1 class="visually-hidden"></h1>
-      <section class="head">
-        <div class="head__block wrapper">
-          <h2>ALL JEWELLERY</h2>
-          <p>Discover picks of fashion's finest trends in our jewellery catalog</p>
+      <section class="perfection">
+        <div class="perfection__block wrapper">
+          <h1>PERFECTION</h1>
+          <p>made to be yours</p>
         </div>
       </section>
-      <section class="catalog-main-content">
-        <div class="catalog-main-content__block wrapper">
-          <div class="catalog-main-content__filters filters">
-            <button class="filters__button" type="button">Filter</button>
-            <form class="filters__form" method="GET" action="https://echo.htmlacademy.ru/">
-              <button class="filters__form-button-close" type="button">
-                <svg class="filters__form-button-close-icon" width="32" height="32" viewBox="0 0 32 32" aria-label="Close">
-                  <use href="#icon-special-close"></use>
+
+
+      <section class="blog">
+        <div class="blog__block wrapper">
+          <h2>Blog</h2>
+          <a class="blog__more" href="#">Read All</a>
+          <ul class="blog__list">
+            <li class="blog__item">
+              <picture>
+<!-- 1х: 216px; 2x: 430px -->
+                <source type="image/webp" media="(max-width: 1023px)" srcset="img/main/blog-first-post-img-tablet.webp 1x, img/main/blog-first-post-img-tablet@2x.webp 2x">
+                <source media="(max-width: 1023px)" srcset="img/main/blog-first-post-img-tablet.jpg 1x, img/main/blog-first-post-img-tablet@2x.jpg 2x">
+
+                <source type="image/webp" media="(min-width: 1024px)" srcset="img/main/blog-first-post-img-desctop.webp 1x, img/main/blog-first-post-img-desctop@2x.webp 2x">
+                <img src="img/main/blog-first-post-img-desctop.jpg" srcset="img/main/blog-first-post-img-desctop@2x.jpg" width="285" height="300" alt="How to care for your jewellery">
+              </picture>
+              <div class="blog__item-text-content">
+                <p>September 30, 2019</p>
+                <b>How to care for your jewellery</b>
+                <a class="blog__link" href="#">Read Article</a>
+              </div>
+            </li>
+            <li class="blog__item">
+              <picture>
+
+                <source type="image/webp" media="(max-width: 1023px)" srcset="img/main/blog-second-post-img-tablet.webp 1x, img/main/blog-second-post-img-tablet@2x.webp 2x">
+                <source media="(max-width: 1023px)" srcset="img/main/blog-second-post-img-tablet.jpg 1x, img/main/blog-second-post-img-tablet@2x.jpg 2x">
+
+                <source type="image/webp" media="(min-width: 1024px)" srcset="img/main/blog-second-post-img-desctop.webp 1x, img/main/blog-second-post-img-desctop@2x.webp 2x">
+                <img src="img/main/blog-second-post-img-desctop.jpg" srcset="img/main/blog-second-post-img-desctop@2x.jpg" width="285" height="300" alt="Power of crystals">
+              </picture>
+              <div class="blog__item-text-content">
+                <p>September 23, 2019</p>
+                <b>Power of crystals</b>
+                <a class="blog__link" href="#">Read Article</a>
+              </div>
+            </li>
+            <li class="blog__item">
+              <picture>
+
+                <source type="image/webp" media="(max-width: 1023px)" srcset="img/main/blog-third-post-img-tablet.webp 1x, img/main/blog-third-post-img-tablet@2x.webp 2x">
+                <source media="(max-width: 1023px)" srcset="img/main/blog-third-post-img-tablet.jpg 1x, img/main/blog-third-post-img-tablet@2x.jpg 2x">
+
+                <source type="image/webp" media="(min-width: 1024px)" srcset="img/main/blog-third-post-img-desctop.webp 1x, img/main/blog-third-post-img-desctop@2x.webp 2x">
+                <img src="img/main/blog-third-post-img-desctop.jpg" srcset="img/main/blog-third-post-img-desctop@2x.jpg" width="570" height="630" alt="AW 19 trends">
+              </picture>
+              <div class="blog__item-text-content">
+                <p>September 16, 2019</p>
+                <b>AW 19 trends</b>
+                <a class="blog__link" href="#">Read Article</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="faq">
+        <div class="faq__block wrapper">
+          <h2>Frequently asked questions</h2>
+          <ul class="faq__list">
+            <li class="faq__item">
+              <button class="faq__button" type="button">
+                <svg class="faq__button-icon-close" width="15" height="8" viewBox="0 0 17 10" aria-label="Open">
+                  <use href="#icon-arrow-up"></use>
+                </svg>
+                <svg class="faq__button-icon-open" width="15" height="8" viewBox="0 0 17 10" aria-label="Close">
+                  <use href="#icon-arrow-down"></use>
                 </svg>
               </button>
-              <fieldset class="filters__fieldset">
-                <button class="filters__fieldset-button" type="button">
-                  <svg class="filters__fieldset-button-icon-close" width="15" height="8" viewBox="0 0 17 10" aria-label="Open">
-                    <use href="#icon-arrow-up"></use>
-                  </svg>
-                  <svg class="filters__fieldset-button-icon-open" width="15" height="8" viewBox="0 0 17 10" aria-label="Close">
-                    <use href="#icon-arrow-down"></use>
-                  </svg>
-                </button>
-                <p>Product</p>
-                <ul class="filters__element filters__fieldset-checkbox-list">
-                  <li class="filters__fieldset-checkbox-item">
-                    <input type="checkbox" id="product_necklaces" name="product-necklaces" checked="">
-                    <label for="product_necklaces">Necklaces</label>
-                  </li>
-                  <li class="filters__fieldset-checkbox-item">
-                    <input type="checkbox" id="product_chokers" name="product-chokers" checked="">
-                    <label for="product_chokers">Chokers</label>
-                  </li>
-                  <li class="filters__fieldset-checkbox-item">
-                    <input type="checkbox" id="product_rings" name="product-rings">
-                    <label for="product_rings">Rings</label>
-                  </li>
-                  <li class="filters__fieldset-checkbox-item">
-                    <input type="checkbox" id="product_earrings" name="product-earrings" checked="">
-                    <label for="product_earrings">Earrings</label>
-                  </li>
-                </ul>
-              </fieldset>
-              <fieldset class="filters__fieldset">
-                <button class="filters__fieldset-button" type="button">
-                  <svg class="filters__fieldset-button-icon-close" width="15" height="8" viewBox="0 0 17 10" aria-label="Open">
-                    <use href="#icon-arrow-up"></use>
-                  </svg>
-                  <svg class="filters__fieldset-button-icon-open" width="15" height="8" viewBox="0 0 17 10" aria-label="Close">
-                    <use href="#icon-arrow-down"></use>
-                  </svg>
-                </button>
-                <p>Material</p>
-                <ul class="filters__element filters__fieldset-checkbox-list">
-                  <li class="filters__fieldset-checkbox-item">
-                    <input type="checkbox" id="material_gold" name="material-gold" checked="">
-                    <label for="material_gold">Gold</label>
-                  </li>
-                  <li class="filters__fieldset-checkbox-item">
-                    <input type="checkbox" id="material_silver" name="material-silver" checked="">
-                    <label for="material_silver">Silver</label>
-                  </li>
-                </ul>
-              </fieldset>
-              <fieldset class="filters__fieldset">
-                <button class="filters__fieldset-button" type="button">
-                  <svg class="filters__fieldset-button-icon-close" width="15" height="8" viewBox="0 0 17 10" aria-label="Open">
-                    <use href="#icon-arrow-up"></use>
-                  </svg>
-                  <svg class="filters__fieldset-button-icon-open" width="15" height="8" viewBox="0 0 17 10" aria-label="Close">
-                    <use href="#icon-arrow-down"></use>
-                  </svg>
-                </button>
-                <p>Collection</p>
-                <ul class="filters__element filters__fieldset-checkbox-list">
-                  <li class="filters__fieldset-checkbox-item">
-                    <input type="checkbox" id="collection_pink_flamingo" name="collection-pink_flamingo" checked="">
-                    <label for="collection_pink_flamingo">Pink flamingo</label>
-                  </li>
-                  <li class="filters__fieldset-checkbox-item">
-                    <input type="checkbox" id="collection_dreams" name="collection-dreams" checked="">
-                    <label for="collection_dreams">Dreams</label>
-                  </li>
-                </ul>
-              </fieldset>
-              <fieldset class="filters__fieldset">
-                <button class="filters__fieldset-button" type="button">
-                  <svg class="filters__fieldset-button-icon-close" width="15" height="8" viewBox="0 0 17 10" aria-label="Open">
-                    <use href="#icon-arrow-up"></use>
-                  </svg>
-                  <svg class="filters__fieldset-button-icon-open" width="15" height="8" viewBox="0 0 17 10" aria-label="Close">
-                    <use href="#icon-arrow-down"></use>
-                  </svg>
-                </button>
-                <p>Price</p>
-                <div class="filters__element filters__price-filter">
-                  <div class="filters__price-controls">
-                    <div class="filters__scale">
-                      <div class="filters__bar"></div>
-                    </div>
-                    <div class="filters__toggle filters__toggle--min" tabindex="0" title="Select min price"></div>
-                    <div class="filters__toggle filters__toggle--max" tabindex="0" title="Select max price"></div>
-                  </div>
-                  <div class="filters__price-input">
-                    <p>$</p>
-                    <label class="visually-hidden" for="min_price" aria-label="Min Price"></label>
-                    <input type="text" id="min_price" name="min-price" value="55">
-                    <b>$</b>
-                    <label class="visually-hidden" for="max_price" aria-label="Max Price"></label>
-                    <input type="text" id="max_price" name="max-price" value="155">
-                  </div>
-                </div>
-              </fieldset>
-              <button class="filters__form-button filters__form-submit" type="submit">Apply</button>
-              <button class="filters__form-button filters__form-reset" type="reset">Clear All</button>
-            </form>
-          </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          <div class="catalog-main-content__goods goods"></div>
+              <b>What materials are the jewellery made of?</b>
+              <p>Our jewellerry is made of solid gold, silver or leather.  Also, some jewellery contains precious and semiprecious stones and crystals.</p>
+            </li>
+            <li class="faq__item">
+              <button class="faq__button" type="button">
+                <svg class="faq__button-icon-close" width="15" height="8" viewBox="0 0 17 10" aria-label="Open">
+                  <use href="#icon-arrow-up"></use>
+                </svg>
+                <svg class="faq__button-icon-open" width="15" height="8" viewBox="0 0 17 10" aria-label="Close">
+                  <use href="#icon-arrow-down"></use>
+                </svg>
+              </button>
+              <b>Which countries do you deliver to?</b>
+              <p>Our jewellerry is made of solid gold, silver or leather.  Also, some jewellery contains precious and semiprecious stones and crystals.</p>
+            </li>
+            <li class="faq__item">
+              <button class="faq__button" type="button">
+                <svg class="faq__button-icon-close" width="15" height="8" viewBox="0 0 17 10" aria-label="Open">
+                  <use href="#icon-arrow-up"></use>
+                </svg>
+                <svg class="faq__button-icon-open" width="15" height="8" viewBox="0 0 17 10" aria-label="Close">
+                  <use href="#icon-arrow-down"></use>
+                </svg>
+              </button>
+              <b>What are the payment methods?</b>
+              <p>Our jewellerry is made of solid gold, silver or leather.  Also, some jewellery contains precious and semiprecious stones and crystals.</p>
+            </li>
+            <li class="faq__item">
+              <button class="faq__button" type="button">
+                <svg class="faq__button-icon-close" width="15" height="8" viewBox="0 0 17 10" aria-label="Open">
+                  <use href="#icon-arrow-up"></use>
+                </svg>
+                <svg class="faq__button-icon-open" width="15" height="8" viewBox="0 0 17 10" aria-label="Close">
+                  <use href="#icon-arrow-down"></use>
+                </svg>
+              </button>
+              <b>Can I return the jewellery if it didn’t fit me?</b>
+              <p>Our jewellerry is made of solid gold, silver or leather.  Also, some jewellery contains precious and semiprecious stones and crystals.</p>
+            </li>
+          </ul>
         </div>
       </section>
+      <section class="instagram">
+        <div class="instagram__block wrapper">
+          <h2>@Chjewellery</h2>
+          <a class="instagram__more" href="#">Follow Us</a>
+          <ul class="instagram__list">
+            <li class="instagram__item instagram__item--mid">
+              <picture>
+                <source srcset="img/main/instagram-post-img-1.webp 1x, img/main/instagram-post-img-1@2x.webp 2x" type="image/webp">
+                <img src="img/main/instagram-post-img-1.jpg" srcset="img/main/instagram-post-img-1@2x.jpg" width="230" height="230" alt="Post in instagram" loading="lazy">
+              </picture>
+            </li>
+            <li class="instagram__item instagram__item--big">
+              <picture>
+                <source type="image/webp" media="(max-width: 767px)" srcset="img/main/instagram-post-img-2-mobile.webp 1x, img/main/instagram-post-img-2-mobile@2x.webp 2x">
+                <source media="(max-width: 767px)" srcset="img/main/instagram-post-img-2-mobile.jpg 1x, img/main/instagram-post-img-2-mobile@2x.jpg 2x">
 
-
-
-
-
-
-
-
-
-
-
-
-
+                <source srcset="img/main/instagram-post-img-2.webp 1x, img/main/instagram-post-img-2@2x.webp 2x" type="image/webp">
+                <img src="img/main/instagram-post-img-2.jpg" srcset="img/main/instagram-post-img-2@2x.jpg" width="399" height="412" alt="Post in instagram" loading="lazy">
+              </picture>
+            </li>
+            <li class="instagram__item instagram__item--mid">
+              <picture>
+                <source srcset="img/main/instagram-post-img-3.webp 1x, img/main/instagram-post-img-3@2x.webp 2x" type="image/webp">
+                <img src="img/main/instagram-post-img-3.jpg" srcset="img/main/instagram-post-img-3@2x.jpg" width="230" height="230" alt="Post in instagram" loading="lazy">
+              </picture>
+            </li>
+            <li class="instagram__item instagram__item--mid">
+              <picture>
+                <source srcset="img/main/instagram-post-img-4.webp 1x, img/main/instagram-post-img-4@2x.webp 2x" type="image/webp">
+                <img src="img/main/instagram-post-img-4.jpg" srcset="img/main/instagram-post-img-4@2x.jpg" width="230" height="230" alt="Post in instagram" loading="lazy">
+              </picture>
+            </li>
+            <li class="instagram__item instagram__item--small">
+              <picture>
+                <source srcset="img/main/instagram-post-img-5.webp 1x, img/main/instagram-post-img-5@2x.webp 2x" type="image/webp">
+                <img src="img/main/instagram-post-img-5.jpg" srcset="img/main/instagram-post-img-5@2x.jpg" width="230" height="150" alt="Post in instagram" loading="lazy">
+              </picture>
+            </li>
+            <li class="instagram__item instagram__item--small">
+              <picture>
+                <source srcset="img/main/instagram-post-img-6.webp 1x, img/main/instagram-post-img-6@2x.webp 2x" type="image/webp">
+                <img src="img/main/instagram-post-img-6.jpg" srcset="img/main/instagram-post-img-6@2x.jpg" width="230" height="150" alt="Post in instagram" loading="lazy">
+              </picture>
+            </li>
+            <li class="instagram__item instagram__item--small">
+              <picture>
+                <source srcset="img/main/instagram-post-img-7.webp 1x, img/main/instagram-post-img-7@2x.webp 2x" type="image/webp">
+                <img src="img/main/instagram-post-img-7.jpg" srcset="img/main/instagram-post-img-7@2x.jpg" width="230" height="150" alt="Post in instagram" loading="lazy">
+              </picture>
+            </li>
+          </ul>
+        </div>
+      </section>
     </main>
     <footer class="footer">
       <div class="footer__block wrapper">
@@ -357,7 +371,6 @@
         </div>
       </form>
     </div>
-    <script src="js/vendor.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

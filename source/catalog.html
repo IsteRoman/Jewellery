@@ -13,6 +13,7 @@
     <link rel="preload" href="fonts/cormorantgaramond-bold.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="fonts/cormorantgaramond-semibold.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="fonts/cormorantgaramond-italic.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/cormorantgaramond-mediumitalic.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="fonts/poppins-regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="fonts/poppins-medium.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="fonts/poppins-bold.woff2" as="font" type="font/woff2" crossorigin>
@@ -59,22 +60,22 @@
               </a>
             </li>
             <li class="header__navigation-nav-item">
-              <a class="header__navigation-nav-link" href="catalog.html">
+              <a class="header__navigation-nav-link" href="#">
                 Chokers
               </a>
             </li>
             <li class="header__navigation-nav-item">
-              <a class="header__navigation-nav-link" href="catalog.html">
+              <a class="header__navigation-nav-link" href="#">
                 Necklaces
               </a>
             </li>
             <li class="header__navigation-nav-item">
-              <a class="header__navigation-nav-link" href="catalog.html">
+              <a class="header__navigation-nav-link" href="#">
                 Rings
               </a>
             </li>
             <li class="header__navigation-nav-item">
-              <a class="header__navigation-nav-link" href="catalog.html">
+              <a class="header__navigation-nav-link" href="#">
                 Earrings
               </a>
             </li>
@@ -100,18 +101,162 @@
         </div>
       </div>
     </header>
-
-
-
-
-
-
-
     <main>
+      <h1 class="visually-hidden"></h1>
+      <section class="head">
+        <div class="head__block wrapper">
+          <h2>ALL JEWELLERY</h2>
+          <p>Discover picks of fashion's finest trends in our jewellery catalog</p>
+        </div>
+      </section>
+      <section class="catalog-main-content">
+        <div class="catalog-main-content__block wrapper">
+          <div class="catalog-main-content__filters filters">
+            <button class="filters__button" type="button">Filter</button>
+            <form class="filters__form" method="GET" action="https://echo.htmlacademy.ru/">
+              <button class="filters__form-button-close" type="button">
+                <svg class="filters__form-button-close-icon" width="32" height="32" viewBox="0 0 32 32" aria-label="Close">
+                  <use href="#icon-special-close"></use>
+                </svg>
+              </button>
+              <fieldset class="filters__fieldset">
+                <button class="filters__fieldset-button" type="button">
+                  <svg class="filters__fieldset-button-icon-close" width="15" height="8" viewBox="0 0 17 10" aria-label="Open">
+                    <use href="#icon-arrow-up"></use>
+                  </svg>
+                  <svg class="filters__fieldset-button-icon-open" width="15" height="8" viewBox="0 0 17 10" aria-label="Close">
+                    <use href="#icon-arrow-down"></use>
+                  </svg>
+                </button>
+                <p>Product</p>
+                <ul class="filters__element filters__fieldset-checkbox-list">
+                  <li class="filters__fieldset-checkbox-item">
+                    <input type="checkbox" id="product_necklaces" name="product-necklaces" checked>
+                    <label for="product_necklaces">Necklaces</label>
+                  </li>
+                  <li class="filters__fieldset-checkbox-item">
+                    <input type="checkbox" id="product_chokers" name="product-chokers" checked>
+                    <label for="product_chokers">Chokers</label>
+                  </li>
+                  <li class="filters__fieldset-checkbox-item">
+                    <input type="checkbox" id="product_rings" name="product-rings">
+                    <label for="product_rings">Rings</label>
+                  </li>
+                  <li class="filters__fieldset-checkbox-item">
+                    <input type="checkbox" id="product_earrings" name="product-earrings" checked>
+                    <label for="product_earrings">Earrings</label>
+                  </li>
+                </ul>
+              </fieldset>
+              <fieldset class="filters__fieldset">
+                <button class="filters__fieldset-button" type="button">
+                  <svg class="filters__fieldset-button-icon-close" width="15" height="8" viewBox="0 0 17 10" aria-label="Open">
+                    <use href="#icon-arrow-up"></use>
+                  </svg>
+                  <svg class="filters__fieldset-button-icon-open" width="15" height="8" viewBox="0 0 17 10" aria-label="Close">
+                    <use href="#icon-arrow-down"></use>
+                  </svg>
+                </button>
+                <p>Material</p>
+                <ul class="filters__element filters__fieldset-checkbox-list">
+                  <li class="filters__fieldset-checkbox-item">
+                    <input type="checkbox" id="material_gold" name="material-gold" checked>
+                    <label for="material_gold">Gold</label>
+                  </li>
+                  <li class="filters__fieldset-checkbox-item">
+                    <input type="checkbox" id="material_silver" name="material-silver" checked>
+                    <label for="material_silver">Silver</label>
+                  </li>
+                </ul>
+              </fieldset>
+              <fieldset class="filters__fieldset">
+                <button class="filters__fieldset-button" type="button">
+                  <svg class="filters__fieldset-button-icon-close" width="15" height="8" viewBox="0 0 17 10" aria-label="Open">
+                    <use href="#icon-arrow-up"></use>
+                  </svg>
+                  <svg class="filters__fieldset-button-icon-open" width="15" height="8" viewBox="0 0 17 10" aria-label="Close">
+                    <use href="#icon-arrow-down"></use>
+                  </svg>
+                </button>
+                <p>Collection</p>
+                <ul class="filters__element filters__fieldset-checkbox-list">
+                  <li class="filters__fieldset-checkbox-item">
+                    <input type="checkbox" id="collection_pink_flamingo" name="collection-pink_flamingo" checked>
+                    <label for="collection_pink_flamingo">Pink flamingo</label>
+                  </li>
+                  <li class="filters__fieldset-checkbox-item">
+                    <input type="checkbox" id="collection_dreams" name="collection-dreams" checked>
+                    <label for="collection_dreams">Dreams</label>
+                  </li>
+                </ul>
+              </fieldset>
+              <fieldset class="filters__fieldset">
+                <button class="filters__fieldset-button" type="button">
+                  <svg class="filters__fieldset-button-icon-close" width="15" height="8" viewBox="0 0 17 10" aria-label="Open">
+                    <use href="#icon-arrow-up"></use>
+                  </svg>
+                  <svg class="filters__fieldset-button-icon-open" width="15" height="8" viewBox="0 0 17 10" aria-label="Close">
+                    <use href="#icon-arrow-down"></use>
+                  </svg>
+                </button>
+                <p>Price</p>
+                <div class="filters__element filters__price-filter">
+                  <div class="filters__price-controls">
+                    <div class="filters__scale">
+                      <div class="filters__bar"></div>
+                    </div>
+                    <div class="filters__toggle filters__toggle--min" tabindex="0" title="Select min price"></div>
+                    <div class="filters__toggle filters__toggle--max" tabindex="0" title="Select max price"></div>
+                  </div>
+                  <div class="filters__price-input">
+                    <p>$</p>
+                    <label class="visually-hidden" for="min_price" aria-label="Min Price"></label>
+                    <input type="text" id="min_price" name="min-price" value="55">
+                    <b>$</b>
+                    <label class="visually-hidden" for="max_price" aria-label="Max Price"></label>
+                    <input type="text" id="max_price" name="max-price" value="155">
+                  </div>
+                </div>
+              </fieldset>
+              <button class="filters__form-button filters__form-submit" type="submit">Apply</button>
+              <button class="filters__form-button filters__form-reset" type="reset">Clear All</button>
+            </form>
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <div class="catalog-main-content__goods goods"></div>
+        </div>
+      </section>
+
+
+
+
+
+
+
+
+
+
+
+
 
     </main>
-
-
     <footer class="footer">
       <div class="footer__block wrapper">
         <div class="footer__tagline">

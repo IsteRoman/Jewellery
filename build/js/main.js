@@ -163,6 +163,9 @@ const removeError = (object) => {
 
 const workForm = () => {
   validation_forms.forEach((form) => {
+    if (!form.querySelector('input[type="email"]')) {
+      return;
+    }
     const emailInput = form.querySelector('input[type="email"]');
     const checkMailField = () => {
       emailInput.addEventListener('blur', () => {
@@ -202,7 +205,56 @@ const workAccordion = (list) => {
 
 
 
+;// CONCATENATED MODULE: ./source/js/filter.js
+
+
+
+const filter = document.querySelector('.filters');
+
+const workFilter = () => {
+  const buttonOpenFiltr = filter.querySelector('.filters__button');
+  const buttonCloseFilter = filter.querySelector('.filters__form-button-close');
+  const buttonApplyFilter = filter.querySelector('.filters__form-submit');
+
+  const openFilter = () => {
+    buttonOpenFiltr.addEventListener('click', () => {
+      body.classList.add('filter-open');
+      filter.querySelector('fieldset').classList.add('block--open');
+    });
+  };
+
+  const closeFilter = () => {
+    buttonCloseFilter.addEventListener('click', () => {
+      body.classList.remove('filter-open');
+    });
+  };
+
+  const closeEscFilter = () => {
+    window.addEventListener('keydown', (evt) => {
+      if (evt.keyCode === menu_namespaceObject.ESC_CODE) {
+        body.classList.remove('filter-open');
+      }
+    });
+  };
+
+  const closeFilterByApply = () => {
+    buttonApplyFilter.addEventListener('click', (evt) => {
+      evt.preventDefault();
+      body.classList.remove('filter-open');
+    });
+  };
+
+  workAccordion('fieldset');
+  openFilter();
+  closeFilter();
+  closeEscFilter();
+  closeFilterByApply();
+};
+
+
+
 ;// CONCATENATED MODULE: ./source/js/main.js
+
 
 
 
@@ -229,7 +281,7 @@ if(document.querySelector('.login')) {
   err + 1;
 }
 
-if(document.querySelector('form')) {
+if(document.querySelector('input[type="email"]')) {
   workForm();
 } else {
   err + 1;
@@ -237,6 +289,12 @@ if(document.querySelector('form')) {
 
 if(document.querySelector('.faq')) {
   workAccordion('.faq__item');
+} else {
+  err + 1;
+}
+
+if(document.querySelector('.filters')) {
+  workFilter();
 } else {
   err + 1;
 }

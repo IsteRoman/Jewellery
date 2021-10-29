@@ -13,6 +13,9 @@ const removeError = (object) => {
 
 const workForm = () => {
   forms.forEach((form) => {
+    if (!form.querySelector('input[type="email"]')) {
+      return;
+    }
     const emailInput = form.querySelector('input[type="email"]');
     const checkMailField = () => {
       emailInput.addEventListener('blur', () => {
