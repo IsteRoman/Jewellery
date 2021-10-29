@@ -1,14 +1,8 @@
-const accordionList = document.querySelectorAll('.footer__main-info-item');
-
-const workAccordion = () => {
+const workAccordion = (list) => {
+  const accordionList = document.querySelectorAll(list);
   accordionList.forEach((element) => {
-    element.addEventListener('click', (event) => {
-      element.classList.toggle('footer__main-info-item--open');
-      accordionList.forEach((el) => {
-        if (el !== event.currentTarget) {
-          el.classList.remove('footer__main-info-item--open');
-        }
-      });
+    element.addEventListener('click', () => {
+      element.classList.toggle('block--open');
     });
   });
 };

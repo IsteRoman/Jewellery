@@ -190,7 +190,20 @@ const workForm = () => {
 
 
 
+;// CONCATENATED MODULE: ./source/js/accordion.js
+const workAccordion = (list) => {
+  const accordionList = document.querySelectorAll(list);
+  accordionList.forEach((element) => {
+    element.addEventListener('click', () => {
+      element.classList.toggle('block--open');
+    });
+  });
+};
+
+
+
 ;// CONCATENATED MODULE: ./source/js/main.js
+
 
 
 
@@ -218,6 +231,12 @@ if(document.querySelector('.login')) {
 
 if(document.querySelector('form')) {
   workForm();
+} else {
+  err + 1;
+}
+
+if(document.querySelector('.faq')) {
+  workAccordion('.faq__item');
 } else {
   err + 1;
 }

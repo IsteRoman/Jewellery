@@ -1,0 +1,207 @@
+.faq {
+  padding-bottom: 108px;
+
+  @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
+    padding-bottom: 84px;
+  }
+
+  @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
+    padding-bottom: 70px;
+  }
+}
+
+.faq__block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h2 {
+    margin: 0;
+    margin-bottom: 60px;
+    padding: 0;
+    font-size: 34px;
+    line-height: 0.65;
+    font-family: "CormorantGaramond", "Arial", sans-serif;
+    font-weight: 700;
+    color: $dark;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
+    width: 100%;
+  }
+
+  @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
+    h2 {
+      margin-bottom: 40px;
+      text-align: center;
+    }
+  }
+}
+
+.faq__list {
+  display: flex;
+  flex-direction: column;
+  width: 83%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
+    width: 100%;
+  }
+
+  @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
+    width: 100%;
+  }
+}
+
+.faq__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 50px 393px 50px 38px;
+  border-left: 1px solid $brown;
+  border-right: 1px solid $brown;
+
+  b {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    line-height: 130%;
+    font-weight: 500;
+    color: $dark;
+  }
+
+  p {
+    display: none;
+    margin: 0;
+    margin-top: 20px;
+    padding: 0;
+    padding-left: 12px;
+    font-weight: 400;
+    line-height: 130%;
+    color: $dark;
+  }
+
+  &:not(:last-of-type) {
+    border-top: 1px solid $brown;
+  }
+
+  &:last-of-type {
+    border-top: 1px solid $brown;
+    border-bottom: 1px solid $brown;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
+    padding-right: 101px;
+
+    p {
+      margin-top: 35px;
+      padding-left: 0;
+    }
+  }
+
+  @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
+    padding: 25px 61px 25px 25px;
+
+    b {
+      font-size: 16px;
+      line-height: 140%;
+    }
+
+    p {
+      margin-top: 25px;
+      padding-left: 0;
+      font-size: 14px;
+      line-height: 140%;
+    }
+  }
+}
+
+.faq__button {
+  position: absolute;
+  top: 52px;
+  right: 50px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 15px;
+  height: 8px;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  &:focus,
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
+    top: 50px;
+    width: 23px;
+    height: 12px;
+  }
+
+  @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
+    top: 25px;
+    right: 25px;
+    width: 20px;
+    height: 10px;
+  }
+}
+
+.faq__button-icon-close,
+.faq__button-icon-open {
+  width: 15px;
+  height: 8px;
+  fill: none;
+  stroke: $brown;
+
+  @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
+    width: 23px;
+    height: 12px;
+  }
+
+  @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
+    width: 20px;
+    height: 10px;
+  }
+}
+
+.faq__button-icon-close {
+  display: block;
+}
+
+.faq__button-icon-open {
+  display: none;
+}
+
+.no-js {
+  & .faq__button {
+    display: none;
+  }
+
+  & p {
+    display: block;
+  }
+
+}
+
+.block--open {
+  & p {
+    display: block;
+  }
+
+  & .faq__button-icon-close {
+    display: none;
+  }
+
+  & .faq__button-icon-open {
+    display: block;
+  }
+}
