@@ -1,12 +1,12 @@
 .blog {
-  padding-bottom: 100px;
+  padding-bottom: 132px;
 
   @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
     padding-bottom: 80px;
   }
 
   @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
-    padding-bottom: 70px;
+    padding-bottom: 62px;
   }
 }
 
@@ -17,7 +17,7 @@
 
   h2 {
     margin: 0;
-    margin-bottom: 35px;
+    margin-bottom: 34px;
     padding: 0;
     font-size: 34px;
     line-height: 0.65;
@@ -25,12 +25,19 @@
     font-weight: 700;
     color: $dark;
   }
+
+  @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
+    h2 {
+      margin-bottom: 32px;
+    }
+  }
 }
 
 .blog__more {
   margin: 0;
-  margin-bottom: 70px;
+  margin-bottom: 60px;
   padding: 0;
+  padding-bottom: 4px;
   color: $dark;
   border-bottom: 1px solid $brown;
   cursor: pointer;
@@ -46,6 +53,10 @@
 
   @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
     margin-bottom: 60px;
+  }
+
+  @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
+    margin-bottom: 50px;
   }
 }
 
@@ -205,8 +216,28 @@
     text-align: center;
   }
 
+  @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
+    p {
+      margin-bottom: 17px;
+    }
+
+    b {
+      margin-bottom: 40px;
+      line-height: 120%;
+    }
+  }
+
   @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
-    padding: 49px 61px;
+    padding: 49px 61px 48px 61px;
+
+    p {
+      margin-bottom: 17px;
+    }
+
+    b {
+      margin-bottom: 42px;
+      line-height: 120%;
+    }
   }
 }
 
@@ -224,5 +255,13 @@
 
   &:active {
     opacity: 0.5;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
+    padding-bottom: 5px;
+  }
+
+  @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
+    padding-bottom: 5px;
   }
 }

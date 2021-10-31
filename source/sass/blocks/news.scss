@@ -1,13 +1,15 @@
 .news {
   padding-top: 130px;
-  padding-bottom: 130px;
+  padding-bottom: 125px;
 
   @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
-    padding-bottom: 84px;
+    padding-top: 81px;
+    padding-bottom: 76px;
   }
 
   @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
-    padding-bottom: 70px;
+    padding-top: 70px;
+    padding-bottom: 66px;
   }
 }
 
@@ -23,7 +25,7 @@
 
   h2 {
     margin: 0;
-    margin-bottom: 35px;
+    margin-bottom: 36px;
     padding: 0;
     font-size: 34px;
     line-height: 0.65;
@@ -34,11 +36,15 @@
 
   @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
     width: 100%;
+
+    h2 {
+      margin-bottom: 33px;
+    }
   }
 
   @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
     h2 {
-      margin-bottom: 40px;
+      margin-bottom: 33px;
       text-align: center;
     }
   }
@@ -46,7 +52,7 @@
 
 .news__more {
   margin: 0;
-  margin-bottom: 60px;
+  margin-bottom: 61px;
   padding: 0;
   color: $dark;
   border-bottom: 1px solid $brown;
@@ -63,16 +69,18 @@
 
   @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
     margin-bottom: 50px;
+    padding-bottom: 5px;
   }
 
   @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
     margin-bottom: 40px;
+    padding-bottom: 4px;
   }
 }
 
 .news__pagination-button {
   position: absolute;
-  top: 30px;
+  top: 29px;
   width: 29px;
   height: 9px;
   padding: 0;
@@ -90,6 +98,7 @@
   }
 
   @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
+    top: 31px;
     width: 36px;
     height: 15px;
   }
@@ -118,6 +127,11 @@
 
 .swiper {
   width: 90vw;
+  max-width: 1170px;
+
+  @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
+    width: 88vw;
+  }
 }
 
 .news__slider-item {
@@ -129,15 +143,61 @@
     height: 100%;
     object-fit: cover;
   }
+
+  & .good__text-info {
+    margin-top: 19px;
+
+    p {
+      margin-bottom: 5px;
+    }
+  }
+
+  @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
+    & .good__text-info {
+      margin-top: 12px;
+
+      p {
+        margin-bottom: 8px;
+      }
+    }
+  }
 }
 
 .swiper-pagination {
   text-align: center;
-  margin-top: 150px;
+  margin-top: 53px;
+  padding-left: 5px;
+
+  @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
+    margin-top: 42px;
+  }
+
+  @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
+    margin-top: 35px;
+  }
+}
+
+.swiper-pagination-current,
+.swiper-pagination-total {
+  @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
+    font-size: 16.5px;
+  }
+}
+
+.swiper-pagination-current {
+  @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
+    margin-right: 10px;
+  }
+}
+
+.swiper-pagination-total {
+  @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
+    margin-left: 6px;
+  }
 }
 
 .swiper-pagination-bullet {
-  margin-right: 15px;
+  margin-right: 8px;
   font-size: 16px;
   font-family: "Poppins", "Arial", sans-serif;
   font-weight: 500;

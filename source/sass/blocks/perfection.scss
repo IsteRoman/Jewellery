@@ -1,6 +1,6 @@
 .perfection {
-  padding-top: 195px;
-  padding-bottom: 194px;
+  padding-top: 183px;
+  padding-bottom: 179px;
   background: url("../img/main/title-zone-main-desctop.jpg") center center no-repeat;
   background-size: cover;
   box-shadow: 0 0 0 1000px $brown-background inset;
@@ -11,8 +11,8 @@
   }
 
   @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
-    padding-top: 200px;
-    padding-bottom: 200px;
+    padding-top: 191px;
+    padding-bottom: 188px;
     background: url("../img/main/title-zone-main-mobile.jpg") center center no-repeat;
     background-size: cover;
     box-shadow: 0 0 0 500px $brown-background inset;
@@ -26,11 +26,11 @@
 
   h1 {
     margin: 0;
-    margin-bottom: 20px;
+    margin-bottom: 0;
     padding: 0;
     font-size: 45px;
-    line-height: 130%;
-    letter-spacing: 0.3px;
+    line-height: 120%;
+    letter-spacing: 0.6px;
     font-family: "CormorantGaramond", "Arial", sans-serif;
     font-weight: 700;
     color: $white;
@@ -46,9 +46,21 @@
     color: $white;
   }
 
+  @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
+    h1 {
+      margin-bottom: -2px;
+      margin-left: -20px;
+      letter-spacing: 0.4px;
+    }
+
+    p {
+      margin-left: -20px;
+    }
+  }
+
   @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
     h1 {
-      margin-bottom: 16px;
+      margin-bottom: -4px;
       font-size: 38px;
     }
 
