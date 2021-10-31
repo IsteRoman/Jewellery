@@ -78,8 +78,7 @@
 .blog__item {
   position: relative;
   display: grid;
-  grid-template-areas:
-    ". text";
+  grid-template-areas: ". text";
   grid-template-columns: 1fr 1fr;
   background-color: $light-brown;
 
@@ -93,8 +92,7 @@
   }
 
   &:nth-of-type(2n) {
-    grid-template-areas:
-      "text .";
+    grid-template-areas: "text .";
 
     img {
       left: unset;
@@ -121,14 +119,14 @@
 
   @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
     min-height: 300px;
+
     img {
       width: 339px;
       height: 300px;
     }
 
     &:nth-of-type(3) {
-      grid-template-areas:
-        ". text";
+      grid-template-areas: ". text";
       grid-template-rows: 1fr;
 
       img {

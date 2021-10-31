@@ -85,6 +85,7 @@
 .catalog-main-content__goods-item {
   width: 31%;
   max-width: 270px;
+
   &:nth-of-type(n+4) {
     margin-top: 40px;
   }

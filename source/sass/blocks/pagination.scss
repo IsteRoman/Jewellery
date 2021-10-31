@@ -20,6 +20,7 @@
     display: none;
   }
 }
+
 .pagination__list {
   display: flex;
   max-width: 300px;
@@ -47,6 +48,7 @@
 .pagination__item--active {
   color: $dark;
   cursor: default;
+
   &:focus,
   &:hover,
   &:active {

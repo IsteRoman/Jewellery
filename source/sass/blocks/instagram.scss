@@ -52,8 +52,8 @@
 .instagram__list {
   display: grid;
   grid-template-areas:
-  ". a . ."
-  ". a . .";
+    ". a . ."
+    ". a . .";
   grid-template-columns: 1fr 1.78fr 1fr 1fr;
   gap: 34px 27px;
   max-width: 100%;
@@ -67,10 +67,10 @@
 
   @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
     grid-template-areas:
-    ". a"
-    ". a"
-    ". .";
-  grid-template-columns:1fr 1fr;
+      ". a"
+      ". a"
+      ". .";
+    grid-template-columns: 1fr 1fr;
     gap: 27px 24px;
   }
 }
@@ -96,4 +96,3 @@
     }
   }
 }
-
