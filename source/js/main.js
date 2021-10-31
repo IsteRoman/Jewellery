@@ -4,6 +4,7 @@ import {workPopup} from './popup.js';
 import {workForm} from './validation.js';
 import {workAccordion} from './accordion.js';
 import {workFilter} from './filter.js';
+import {workSlider} from './slider.js';
 
 const err = 1;
 
@@ -39,6 +40,12 @@ if(document.querySelector('.faq')) {
 
 if(document.querySelector('.filters')) {
   workFilter();
+} else {
+  err + 1;
+}
+
+if(document.querySelector('.swiper')) {
+  workSlider();
 } else {
   err + 1;
 }

@@ -1,0 +1,39 @@
+.good {
+  display: flex;
+  flex-direction: column;
+
+  &:focus,
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.good__text-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 25px;
+
+  p,
+  b {
+    margin: 0;
+    padding: 0;
+    line-height: 130%;
+    color: $dark;
+  }
+
+  p {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  b {
+    font-size: 14px;
+    font-weight: 700;
+  }
+}
+

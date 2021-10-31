@@ -1,0 +1,137 @@
+.news {
+  padding-top: 130px;
+  padding-bottom: 130px;
+
+  @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
+    padding-bottom: 84px;
+  }
+
+  @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
+    padding-bottom: 70px;
+  }
+}
+
+.news__main-container {
+  position: relative;
+}
+
+.news__block {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h2 {
+    margin: 0;
+    margin-bottom: 35px;
+    padding: 0;
+    font-size: 34px;
+    line-height: 0.65;
+    font-family: "CormorantGaramond", "Arial", sans-serif;
+    font-weight: 700;
+    color: $dark;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
+    width: 100%;
+  }
+
+  @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
+    h2 {
+      margin-bottom: 40px;
+      text-align: center;
+    }
+  }
+}
+
+.news__more {
+  margin: 0;
+  margin-bottom: 60px;
+  padding: 0;
+  color: $dark;
+  border-bottom: 1px solid $brown;
+  cursor: pointer;
+
+  &:focus,
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+
+  @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
+    margin-bottom: 46px;
+  }
+}
+
+.news__pagination-button {
+  position: absolute;
+  top: 30px;
+  width: 29px;
+  height: 9px;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  &:focus,
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.news__pagination-button-icon {
+  stroke: $brown;
+}
+
+.news__pagination-button--back {
+  left: 0;
+}
+
+.news__pagination-button--next {
+  right: 0;
+}
+
+
+
+
+.swiper-pagination {
+  text-align: center;
+  margin-top: 150px;
+}
+
+.news__slider-item {
+  display: none;
+  width: auto;
+
+  & .good__content img {
+    height: 284px;
+    object-fit: cover;
+  }
+}
+
+
+
+
+.swiper-pagination-bullet {
+  margin-right: 15px;
+  font-size: 16px;
+  font-family: "Poppins", "Arial", sans-serif;
+  font-weight: 500;
+  line-height: 130%;
+  color: $gray;
+  background: none;
+  cursor: pointer;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  color: $dark;
+  background: none;
+}
