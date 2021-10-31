@@ -5,8 +5,8 @@ const workSlider = () => {
     spaceBetween: 30,
     direction: 'horizontal',
     slideClass: 'news__slider-item',
-    slidesPerView: '2',
-    slidesPerGroup: '2',
+    slidesPerView: 2,
+    slidesPerGroup: 2,
 
     pagination: {
       el: '.swiper-pagination',
@@ -23,11 +23,11 @@ const workSlider = () => {
     },
 
     breakpoints: {
-      1023: {
-        slidesPerView: '4',
-        slidesPerGroup: '4',
+      1024: {
+        slidesPerView: 4,
+        slidesPerGroup: 4,
         pagination: {
-          type: 'bullet',
+          type: 'bullets',
           renderBullet: function(index, className) {
             return `<span class= ${className}> ${index + 1} </span>`;
           },
@@ -35,7 +35,9 @@ const workSlider = () => {
       },
       768: {
         pagination: {
-          type: 'bullet',
+          slidesPerView: 'auto',
+          slidesPerGroup: 2,
+          type: 'bullets',
           renderBullet: function(index, className) {
             return `<span class= ${className}> ${index + 1} </span>`;
           },
