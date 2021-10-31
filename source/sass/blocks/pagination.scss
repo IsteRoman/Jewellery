@@ -31,7 +31,7 @@
 }
 
 .pagination__item {
-  margin-left: 15px;
+  margin-left: 13px;
   color: $gray;
   cursor: pointer;
 
@@ -42,6 +42,10 @@
 
   &:active {
     opacity: 0.5;
+  }
+
+  @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
+    margin-left: 23px;
   }
 }
 

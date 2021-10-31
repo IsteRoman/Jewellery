@@ -1,18 +1,19 @@
 .head {
-  padding-top: 102px;
-  padding-bottom: 102px;
+  padding-top: 94px;
+  padding-bottom: 97px;
   background: url("../img/catalog/title-zone-catalog-desctop.jpg") center center no-repeat;
   background-size: cover;
   box-shadow: 0 0 0 1000px $brown-background inset;
 
   @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
+    padding-top: 93px;
     background: url("../img/catalog/title-zone-catalog-tablet.jpg") center center no-repeat;
     background-size: cover;
   }
 
   @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
-    padding-top: 89px;
-    padding-bottom: 89px;
+    padding-top: 80px;
+    padding-bottom: 85px;
     background: url("../img/catalog/title-zone-catalog-mobile.jpg") center center no-repeat;
     background-size: cover;
     box-shadow: 0 0 0 500px $brown-background inset;
@@ -26,9 +27,9 @@
 
   h2 {
     margin: 0;
-    margin-bottom: 20px;
+    margin-bottom: 0;
     padding: 0;
-    font-size: 45px;
+    font-size: 34px;
     line-height: 130%;
     letter-spacing: 0.3px;
     font-family: "CormorantGaramond", "Arial", sans-serif;
@@ -54,6 +55,7 @@
     }
 
     p {
+      margin-top: 1px;
       line-height: 120%;
       text-align: center;
     }

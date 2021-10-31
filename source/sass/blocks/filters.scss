@@ -68,6 +68,8 @@
     display: none;
     align-self: center;
     width: 100%;
+    padding-left: 26px;
+    padding-right: 26px;
     background-color: $white;
 
     .no-js & {
@@ -81,7 +83,7 @@
       display: flex;
       width: 100%;
       height: 100%;
-      padding-top: 67px;
+      padding-top: 71px;
       padding-bottom: 20px;
       overflow-y: auto;
     }
@@ -127,8 +129,8 @@
 
     .filter-open & {
       position: absolute;
-      top: 20px;
-      right: 20px;
+      top: 60px;
+      right: 15px;
       display: inline-flex;
     }
   }
@@ -137,7 +139,7 @@
 .filters__fieldset {
   position: relative;
   margin: 0;
-  padding: 28px 25px 27px 25px;
+  padding: 24px 25px 23px 25px;
   border: none;
   border-left: 1px solid $brown;
   border-right: 1px solid $brown;
@@ -172,7 +174,7 @@
   }
 
   @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
-    padding: 30px 20px;
+    padding: 29px 20px 26px 20px;
     border-left: none;
     border-right: none;
 
@@ -188,8 +190,8 @@
 
 .filters__fieldset-button {
   position: absolute;
-  top: 30px;
-  right: 25px;
+  top: 28px;
+  right: 24px;
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -222,9 +224,9 @@
 
   @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
     top: 31px;
-    right: 20px;
-    width: 20px;
-    height: 10px;
+    right: 17px;
+    width: 25px;
+    height: 15px;
   }
 }
 
@@ -247,25 +249,29 @@
 }
 
 .filters__fieldset-button-icon-close {
-  display: block;
+  display: none;
 }
 
 .filters__fieldset-button-icon-open {
-  display: none;
+  display: block;
 }
 
 .filters__fieldset-checkbox-list {
   display: flex;
   flex-direction: column;
   margin: 0;
-  margin-top: 30px;
+  margin-top: 21px;
   padding: 0;
   list-style: none;
+
+  @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
+    margin-top: 23px;
+  }
 }
 
 .filters__fieldset-checkbox-item {
   &:not(:last-of-type) {
-    margin-bottom: 15px;
+    margin-bottom: 12px;
   }
 
   input {
@@ -275,7 +281,8 @@
   label {
     position: relative;
     display: inline-flex;
-    padding-left: 26px;
+    padding-left: 34px;
+    font-size: 14px;
     line-height: 130%;
     cursor: pointer;
 
@@ -291,8 +298,8 @@
     &::before {
       content: "";
       position: absolute;
-      top: 2px;
-      left: 0;
+      top: 0;
+      left: 9px;
       width: 15px;
       height: 15px;
       border: 1px solid $brown;
@@ -301,8 +308,8 @@
     &::after {
       content: none;
       position: absolute;
-      top: 3px;
-      left: 1px;
+      top: 1px;
+      left: 9px;
       width: 14px;
       height: 14px;
       background-color: $brown;
@@ -339,22 +346,23 @@
 
   @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
     &:not(:last-of-type) {
-      margin-bottom: 26px;
+      margin-bottom: 20px;
     }
 
     label {
       padding-left: 40px;
+      letter-spacing: 1px;
 
       &::before {
-        top: 2px;
-        left: 5px;
+        top: -2px;
+        left: 9px;
         width: 18px;
         height: 18px;
       }
 
       &::after {
-        top: 3px;
-        left: 6px;
+        top: -1px;
+        left: 9px;
         width: 17px;
         height: 17px;
       }
@@ -366,7 +374,7 @@
   display: flex;
   flex-direction: column;
   margin: 0;
-  margin-top: 24px;
+  margin-top: 19px;
   padding: 0;
 }
 
@@ -388,9 +396,14 @@
 .filters__bar {
   position: absolute;
   left: 25%;
-  width: 45%;
+  width: 55%;
   height: 1px;
   background-color: $brown;
+
+  @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
+    left: 13%;
+    width: 68%;
+  }
 }
 
 .filters__toggle {
@@ -407,20 +420,35 @@
   &:active {
     transform: scale(1.1);
   }
+
+  @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
+    width: 18px;
+    height: 18px;
+  }
 }
 
 .filters__toggle--min {
-  left: 25%;
+  left: 22%;
+
+  @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
+    left: 13%;
+  }
 }
 
 .filters__toggle--max {
-  left: 65%;
+  left: 75%;
+
+  @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
+    left: 73%;
+  }
 }
 
 .filters__price-input {
   position: relative;
   display: flex;
   justify-content: center;
+  margin-top: 6px;
+  margin-bottom: -5px;
 
   p,
   b {
@@ -440,6 +468,32 @@
     line-height: 130%;
     background: none;
     border: none;
+
+    &:first-of-type {
+      margin-right: 20%;
+    }
+
+    &:last-of-type {
+      margin-right: -18%;
+    }
+  }
+
+  @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
+    p,
+    b,
+    input {
+      font-size: 16px;
+    }
+
+    input {
+      &:first-of-type {
+        margin-right: 36%;
+      }
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
   }
 }
 
@@ -473,7 +527,7 @@
   @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
     .filter-open & {
       align-self: center;
-      width: 80%;
+      width: 85%;
     }
   }
 }
@@ -517,10 +571,10 @@
   }
 
   & .filters__fieldset-button-icon-close {
-    display: none;
+    display: block;
   }
 
   & .filters__fieldset-button-icon-open {
-    display: block;
+    display: none;
   }
 }

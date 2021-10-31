@@ -1,14 +1,30 @@
 .catalog-main-content {
+  position: relative;
   padding-top: 80px;
-  padding-bottom: 80px;
+  padding-bottom: 77px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 132px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: $light-gray;
+  }
 
   @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
     padding-top: 50px;
+    padding-bottom: 85px;
+
+    &::before {
+      bottom: 139px;
+    }
   }
 
   @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
     padding-top: 40px;
-    padding-bottom: 40px;
+    padding-bottom: 68px;
   }
 }
 
@@ -54,7 +70,7 @@
 
 .catalog-main-content__goods {
   flex-direction: column;
-  width: 75%;
+  width: 74.5%;
 
   @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
     width: 100%;
@@ -87,19 +103,41 @@
   max-width: 270px;
 
   &:nth-of-type(n+4) {
-    margin-top: 40px;
+    margin-top: 35px;
+  }
+
+  & .good__text-info {
+    margin-top: 17px;
+    margin-left: 3px;
+
+    p {
+      margin-bottom: 8px;
+    }
   }
 
   @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
-    max-width: 206px;
+    width: 30.5%;
   }
 
   @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
     width: 45%;
-    max-width: 130px;
+    max-width: unset;
+
+    img {
+      min-height: 135px;
+    }
 
     &:nth-of-type(n+3) {
-      margin-top: 30px;
+      margin-top: 26px;
+    }
+
+    & .good__text-info {
+      margin-top: 13px;
+      margin-left: 3px;
+
+      p {
+        margin-bottom: 8px;
+      }
     }
   }
 }
@@ -108,10 +146,10 @@
   display: flex;
   justify-content: center;
   flex-wrap: nowrap;
-  margin-top: 80px;
+  margin-top: 72px;
 
   & .pagination__list {
-    margin-left: auto;
+    margin-left: calc(50% - 130px);
     margin-right: auto;
   }
 
@@ -120,6 +158,11 @@
   }
 
   @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
-    margin-top: 50px;
+    margin-top: 41px;
+
+    & .pagination__list {
+      margin-left: calc(50% - 92px);
+      margin-right: auto;
+    }
   }
 }
