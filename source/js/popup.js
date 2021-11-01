@@ -1,6 +1,7 @@
 import {body} from  './start.js';
 import {ESC_CODE} from  './menu.js';
 const TAB_CODE = 9;
+const popupBlock = document.querySelector('.login');
 const buttonOpenModal = document.querySelector('.header__navigation-login');
 const popupForm = document.querySelector('.login__form');
 const buttonCloseModal = document.querySelector('.login__button-close');
@@ -20,7 +21,7 @@ const closeByOverlay = () => {
   }
 };
 
-const tabFocusRestrictor = () => {
+const createPopupTabCycle = () => {
   window.addEventListener('keydown', (evt) => {
     const focused = document.activeElement;
     if (focused === buttonCloseModal && evt.keyCode === TAB_CODE) {
@@ -30,6 +31,9 @@ const tabFocusRestrictor = () => {
 };
 
 const openPopup = () => {
+  if (!buttonOpenModal) {
+    return;
+  }
   buttonOpenModal.addEventListener('click', (evt) => {
     evt.preventDefault();
     if (body.classList.contains('menu-open')) {
@@ -38,7 +42,7 @@ const openPopup = () => {
     body.classList.add('popup--open');
     popupForm.children[1].focus();
     body.style.overflow = 'hidden';
-    tabFocusRestrictor();
+    createPopupTabCycle();
     closeByOverlay();
   });
 };
@@ -52,15 +56,21 @@ const closeByEsc = () => {
 };
 
 const closeByButton = () => {
+  if (!buttonCloseModal) {
+    return;
+  }
   buttonCloseModal.addEventListener('click', () => {
     closeBlock();
   });
 };
 
-const workPopup = () => {
+const runPopupWork = () => {
+  if (!popupBlock || !buttonOpenModal) {
+    return;
+  }
   openPopup();
   closeByEsc();
   closeByButton();
 };
 
-export {workPopup};
+export {runPopupWork};

@@ -148,19 +148,19 @@
   flex-wrap: nowrap;
   margin-top: 72px;
 
-  & .pagination__list {
+  .pagination__list {
     margin-left: calc(50% - 130px);
     margin-right: auto;
   }
 
-  & .pagination__button--forward {
+  .pagination__button--forward {
     justify-content: flex-end;
   }
 
   @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
     margin-top: 41px;
 
-    & .pagination__list {
+    .pagination__list {
       margin-left: calc(50% - 92px);
       margin-right: auto;
     }

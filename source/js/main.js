@@ -1,51 +1,15 @@
 import {checkJS} from './start.js';
-import {workMenu} from './menu.js';
-import {workPopup} from './popup.js';
-import {workForm} from './validation.js';
-import {workAccordion} from './accordion.js';
-import {workFilter} from './filter.js';
-import {workSlider} from './slider.js';
+import {runMenuWork} from './menu.js';
+import {runPopupWork} from './popup.js';
+import {runFormWork} from './validation.js';
+import {runAccordionWork} from './accordion.js';
+import {runFilterWork} from './filter.js';
+import {runSliderWork} from './slider.js';
 
-const err = 1;
-
-if (document.querySelector('body')) {
-  checkJS();
-} else {
-  err + 1;
-}
-
-if (document.querySelector('header')) {
-  workMenu();
-} else {
-  err + 1;
-}
-
-if(document.querySelector('.login')) {
-  workPopup();
-} else {
-  err + 1;
-}
-
-if(document.querySelector('input[type="email"]')) {
-  workForm();
-} else {
-  err + 1;
-}
-
-if(document.querySelector('.faq')) {
-  workAccordion('.faq__item');
-} else {
-  err + 1;
-}
-
-if(document.querySelector('.filters')) {
-  workFilter();
-} else {
-  err + 1;
-}
-
-if(document.querySelector('.swiper')) {
-  workSlider();
-} else {
-  err + 1;
-}
+checkJS();
+runMenuWork();
+runPopupWork();
+runFormWork();
+runAccordionWork('.faq__item');
+runFilterWork();
+runSliderWork();

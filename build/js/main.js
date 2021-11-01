@@ -39,7 +39,7 @@ var __webpack_exports__ = {};
 var menu_namespaceObject = {};
 __webpack_require__.r(menu_namespaceObject);
 __webpack_require__.d(menu_namespaceObject, {
-  "q": function() { return workMenu; }
+  "W": function() { return runMenuWork; }
 });
 
 ;// CONCATENATED MODULE: ./source/js/start.js
@@ -58,6 +58,9 @@ const ESC_CODE = 27;
 const menuButton = document.querySelector('.header__button');
 
 const toggleMenu = () => {
+  if (!menuButton) {
+    return;
+  }
   menuButton.addEventListener('click', () => {
     body.classList.toggle('menu-open');
   });
@@ -71,7 +74,7 @@ const closeMenuByEsc = () => {
   });
 };
 
-const workMenu = () => {
+const runMenuWork = () => {
   toggleMenu();
   closeMenuByEsc();
 };
@@ -83,6 +86,7 @@ const workMenu = () => {
 
 
 const TAB_CODE = 9;
+const popupBlock = document.querySelector('.login');
 const buttonOpenModal = document.querySelector('.header__navigation-login');
 const popupForm = document.querySelector('.login__form');
 const buttonCloseModal = document.querySelector('.login__button-close');
@@ -102,7 +106,7 @@ const closeByOverlay = () => {
   }
 };
 
-const tabFocusRestrictor = () => {
+const createPopupTabCycle = () => {
   window.addEventListener('keydown', (evt) => {
     const focused = document.activeElement;
     if (focused === buttonCloseModal && evt.keyCode === TAB_CODE) {
@@ -112,6 +116,9 @@ const tabFocusRestrictor = () => {
 };
 
 const openPopup = () => {
+  if (!buttonOpenModal) {
+    return;
+  }
   buttonOpenModal.addEventListener('click', (evt) => {
     evt.preventDefault();
     if (body.classList.contains('menu-open')) {
@@ -120,7 +127,7 @@ const openPopup = () => {
     body.classList.add('popup--open');
     popupForm.children[1].focus();
     body.style.overflow = 'hidden';
-    tabFocusRestrictor();
+    createPopupTabCycle();
     closeByOverlay();
   });
 };
@@ -134,12 +141,18 @@ const closeByEsc = () => {
 };
 
 const closeByButton = () => {
+  if (!buttonCloseModal) {
+    return;
+  }
   buttonCloseModal.addEventListener('click', () => {
     closeBlock();
   });
 };
 
-const workPopup = () => {
+const runPopupWork = () => {
+  if (!popupBlock || !buttonOpenModal) {
+    return;
+  }
   openPopup();
   closeByEsc();
   closeByButton();
@@ -161,13 +174,19 @@ const removeError = (object) => {
   object.removeAttribute('style');
 };
 
-const workForm = () => {
+const runFormWork = () => {
+  if (!validation_forms) {
+    return;
+  }
   validation_forms.forEach((form) => {
     if (!form.querySelector('input[type="email"]')) {
       return;
     }
     const emailInput = form.querySelector('input[type="email"]');
     const checkMailField = () => {
+      if (!emailInput) {
+        return;
+      }
       emailInput.addEventListener('blur', () => {
         if (emailInput.value.length === ZERO_VALUE) {
           removeError(emailInput);
@@ -179,6 +198,9 @@ const workForm = () => {
       });
     };
     const stopSubmit = () => {
+      if (!form) {
+        return;
+      }
       form.addEventListener('submit', (evt) => {
         if (undefined.querySelector('input[type="email"]').hasAttribute('style')) {
           evt.preventDefault();
@@ -194,9 +216,12 @@ const workForm = () => {
 
 
 ;// CONCATENATED MODULE: ./source/js/accordion.js
-const workAccordion = (list) => {
+const runAccordionWork = (list) => {
   const accordionList = document.querySelectorAll(list);
   accordionList.forEach((element) => {
+    if (!element) {
+      return;
+    }
     element.addEventListener('click', () => {
       element.classList.toggle('block--open');
     });
@@ -210,20 +235,62 @@ const workAccordion = (list) => {
 
 
 const filter = document.querySelector('.filters');
+const MAX_LENGTH = 4;
 
-const workFilter = () => {
+const runFilterWork = () => {
+  if (!filter) {
+    return;
+  }
   const buttonOpenFiltr = filter.querySelector('.filters__button');
   const buttonCloseFilter = filter.querySelector('.filters__form-button-close');
   const buttonApplyFilter = filter.querySelector('.filters__form-submit');
+  const fieldsets = filter.querySelectorAll('fieldset');
+  const priceFilter = filter.querySelector('.filters__price-filter');
 
   const openFilter = () => {
+    if (!buttonOpenFiltr) {
+      return;
+    }
     buttonOpenFiltr.addEventListener('click', () => {
       body.classList.add('filter-open');
       filter.querySelector('fieldset').classList.add('block--open');
     });
   };
 
+  const stopInput = () => {
+    if (filter.querySelectorAll('input[type="number"]')) {
+      const numberInput = filter.querySelectorAll('input[type="number"]');
+      numberInput.forEach((el) => {
+        if (!el) {
+          return;
+        }
+        el.addEventListener('input', () => {
+          const sumbolsLength = el.value.length;
+          if (sumbolsLength > MAX_LENGTH) {
+            el.value = el.value.slice(0, MAX_LENGTH);
+          }
+        });
+      });
+    }
+  };
+
+  const stopCloseFilter = () => {
+    fieldsets.forEach((el) => {
+      if (el.contains(priceFilter)) {
+        if (!priceFilter) {
+          return;
+        }
+        priceFilter.addEventListener('click', (evt) => {
+          evt.stopPropagation();
+        });
+      }
+    });
+  };
+
   const closeFilter = () => {
+    if (!buttonCloseFilter) {
+      return;
+    }
     buttonCloseFilter.addEventListener('click', () => {
       body.classList.remove('filter-open');
     });
@@ -238,13 +305,18 @@ const workFilter = () => {
   };
 
   const closeFilterByApply = () => {
+    if (!buttonApplyFilter) {
+      return;
+    }
     buttonApplyFilter.addEventListener('click', (evt) => {
       evt.preventDefault();
       body.classList.remove('filter-open');
     });
   };
 
-  workAccordion('fieldset');
+  runAccordionWork('fieldset');
+  stopCloseFilter();
+  stopInput();
   openFilter();
   closeFilter();
   closeEscFilter();
@@ -11190,7 +11262,7 @@ core.use(modules);
 ;// CONCATENATED MODULE: ./source/js/slider.js
 
 
-const workSlider = () => {
+const runSliderWork = () => {
   const swiper = new core('.swiper', {
     spaceBetween: 30,
     direction: 'horizontal',
@@ -11248,49 +11320,13 @@ const workSlider = () => {
 
 
 
-const err = 1;
-
-if (document.querySelector('body')) {
-  checkJS();
-} else {
-  err + 1;
-}
-
-if (document.querySelector('header')) {
-  workMenu();
-} else {
-  err + 1;
-}
-
-if(document.querySelector('.login')) {
-  workPopup();
-} else {
-  err + 1;
-}
-
-if(document.querySelector('input[type="email"]')) {
-  workForm();
-} else {
-  err + 1;
-}
-
-if(document.querySelector('.faq')) {
-  workAccordion('.faq__item');
-} else {
-  err + 1;
-}
-
-if(document.querySelector('.filters')) {
-  workFilter();
-} else {
-  err + 1;
-}
-
-if(document.querySelector('.swiper')) {
-  workSlider();
-} else {
-  err + 1;
-}
+checkJS();
+runMenuWork();
+runPopupWork();
+runFormWork();
+runAccordionWork('.faq__item');
+runFilterWork();
+runSliderWork();
 
 /******/ })()
 ;

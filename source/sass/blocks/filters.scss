@@ -447,6 +447,7 @@
   position: relative;
   display: flex;
   justify-content: center;
+  margin: 0;
   margin-top: 6px;
   margin-bottom: -5px;
 
@@ -468,6 +469,13 @@
     line-height: 130%;
     background: none;
     border: none;
+    outline: 0;
+    appearance: textfield;
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      appearance: none;
+    }
 
     &:first-of-type {
       margin-right: 20%;
@@ -560,21 +568,21 @@
 }
 
 .no-js {
-  & .filters__element {
+  .filters__element {
     display: flex;
   }
 }
 
 .block--open {
-  & .filters__element {
+  .filters__element {
     display: flex;
   }
 
-  & .filters__fieldset-button-icon-close {
+  .filters__fieldset-button-icon-close {
     display: block;
   }
 
-  & .filters__fieldset-button-icon-open {
+  .filters__fieldset-button-icon-open {
     display: none;
   }
 }

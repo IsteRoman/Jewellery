@@ -11,13 +11,19 @@ const removeError = (object) => {
   object.removeAttribute('style');
 };
 
-const workForm = () => {
+const runFormWork = () => {
+  if (!forms) {
+    return;
+  }
   forms.forEach((form) => {
     if (!form.querySelector('input[type="email"]')) {
       return;
     }
     const emailInput = form.querySelector('input[type="email"]');
     const checkMailField = () => {
+      if (!emailInput) {
+        return;
+      }
       emailInput.addEventListener('blur', () => {
         if (emailInput.value.length === ZERO_VALUE) {
           removeError(emailInput);
@@ -29,6 +35,9 @@ const workForm = () => {
       });
     };
     const stopSubmit = () => {
+      if (!form) {
+        return;
+      }
       form.addEventListener('submit', (evt) => {
         if (this.querySelector('input[type="email"]').hasAttribute('style')) {
           evt.preventDefault();
@@ -41,4 +50,4 @@ const workForm = () => {
   });
 };
 
-export {workForm};
+export {runFormWork};

@@ -1,6 +1,6 @@
 import Swiper from 'swiper/bundle';
 
-const workSlider = () => {
+const runSliderWork = () => {
   const swiper = new Swiper('.swiper', {
     spaceBetween: 30,
     direction: 'horizontal',
@@ -47,4 +47,4 @@ const workSlider = () => {
   });
 };
 
-export {workSlider};
+export {runSliderWork};

@@ -3,6 +3,9 @@ const ESC_CODE = 27;
 const menuButton = document.querySelector('.header__button');
 
 const toggleMenu = () => {
+  if (!menuButton) {
+    return;
+  }
   menuButton.addEventListener('click', () => {
     body.classList.toggle('menu-open');
   });
@@ -16,10 +19,10 @@ const closeMenuByEsc = () => {
   });
 };
 
-const workMenu = () => {
+const runMenuWork = () => {
   toggleMenu();
   closeMenuByEsc();
 };
 
 
-export {workMenu};
+export {runMenuWork};

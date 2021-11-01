@@ -186,25 +186,25 @@
 }
 
 .no-js {
-  & .faq__button {
+  .faq__button {
     display: none;
   }
 
-  & p {
+  p {
     display: block;
   }
 }
 
 .block--open {
-  & p {
+  p {
     display: block;
   }
 
-  & .faq__button-icon-close {
+  .faq__button-icon-close {
     display: block;
   }
 
-  & .faq__button-icon-open {
+  .faq__button-icon-open {
     display: none;
   }
 }
