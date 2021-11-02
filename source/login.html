@@ -32,25 +32,23 @@
     <h1 class="visually-hidden">Log In</h1>
     <div class="login-page__login login">
       <h2>Log In</h2>
-      <button class="login__button-close" type="button" aria-label="close" tabindex="7">
+      <form class="login__form" method="GET" action="https://echo.htmlacademy.ru/" tabindex="0">
+        <label class="visually-hidden" for="user_email_login">Your E-mail</label>
+        <input id="user_email_login" name="user-email-login" type="email" placeholder="Your E-mail" required>
+        <label class="visually-hidden" for="user_password_login">Password</label>
+        <input id="user_password_login" name="user-password-login" type="password" placeholder="Password" required>
+        <a class="login__form-forgot" href="#">Forgot your password?</a>
+        <button class="login__form-submit" type="submit">Log In</button>
+        <div class="login__form-new-user">
+          <p>Don’t have an account?</p>
+          <a class="login__form-new-user-sign-up" href="#">Sign up</a>
+        </div>
+      </form>
+      <button class="login__button-close" type="button" aria-label="close" tabindex="0">
         <svg class="login__button-close-icon" width="14" height="14" viewBox="0 0 14 14">
           <use href="#icon-close"></use>
         </svg>
       </button>
-      <form class="login__form" method="GET" action="https://echo.htmlacademy.ru/" tabindex="1">
-        <label class="visually-hidden" for="user_email_login" aria-label="Your E-mail"></label>
-        <input id="user_email_login" name="user-email-login" type="email" placeholder="Your E-mail" required
-          tabindex="2">
-        <label class="visually-hidden" for="user_password_login" aria-label="Введите ваш номер телефона"></label>
-        <input id="user_password_login" name="user-password-login" type="password" placeholder="Password" required
-          tabindex="3">
-        <a class="login__form-forgot" href="#" tabindex="4">Forgot your password?</a>
-        <button class="login__form-submit" type="submit" tabindex="5">Log In</button>
-        <div class="login__form-new-user">
-          <p>Don’t have an account?</p>
-          <a class="login__form-new-user-sign-up" href="#" tabindex="6">Sign up</a>
-        </div>
-      </form>
     </div>
   </div>
 </body>
