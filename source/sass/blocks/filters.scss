@@ -9,6 +9,7 @@
   border: none;
   outline: 0;
   cursor: pointer;
+  transition: $default-transition;
 
   &:focus,
   &:hover {
@@ -99,6 +100,7 @@
   border: none;
   outline: 0;
   cursor: pointer;
+  transition: $default-transition;
 
   &:focus,
   &:hover {
@@ -201,6 +203,7 @@
   background: none;
   border: none;
   cursor: pointer;
+  transition: $default-transition;
 
   &:focus,
   &:hover {
@@ -285,6 +288,7 @@
     font-size: 14px;
     line-height: 130%;
     cursor: pointer;
+    transition: $default-transition;
 
     &:focus,
     &:hover {
@@ -414,6 +418,7 @@
   background-color: $brown;
   border-radius: 50%;
   cursor: pointer;
+  transition: $default-transition;
 
   &:focus,
   &:hover,
@@ -515,6 +520,7 @@
   background: none;
   border: 1px solid $brown;
   cursor: pointer;
+  transition: $default-transition;
 
   &:focus,
   &:hover {

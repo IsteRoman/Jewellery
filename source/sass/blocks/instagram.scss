@@ -48,6 +48,7 @@
   color: $dark;
   border-bottom: 1px solid $brown;
   cursor: pointer;
+  transition: $default-transition;
 
   &:focus,
   &:hover {

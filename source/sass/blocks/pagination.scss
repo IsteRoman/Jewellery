@@ -6,6 +6,7 @@
   border: none;
   outline: 0;
   cursor: pointer;
+  transition: $default-transition;
 
   &:focus,
   &:hover {
@@ -34,6 +35,7 @@
   margin-left: 13px;
   color: $gray;
   cursor: pointer;
+  transition: $default-transition;
 
   &:focus,
   &:hover {

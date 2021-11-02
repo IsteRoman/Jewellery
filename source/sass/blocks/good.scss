@@ -1,6 +1,7 @@
 .good {
   display: flex;
   flex-direction: column;
+  transition: $default-transition;
 
   &:focus,
   &:hover {

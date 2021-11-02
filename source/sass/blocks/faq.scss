@@ -135,6 +135,7 @@
   background: none;
   border: none;
   cursor: pointer;
+  transition: $default-transition;
 
   &:focus,
   &:hover {

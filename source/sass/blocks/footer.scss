@@ -132,6 +132,7 @@
   border: none;
   outline: 0;
   cursor: pointer;
+  transition: $default-transition;
 
   &:focus,
   &:hover {
@@ -200,6 +201,7 @@
 .footer__links-link {
   line-height: 0.67;
   color: $white;
+  transition: $default-transition;
 
   &:focus,
   &:hover {
@@ -239,6 +241,7 @@
   align-items: center;
   line-height: 0.67;
   color: $white;
+  transition: $default-transition;
 
   &:focus,
   &:hover {

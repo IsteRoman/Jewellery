@@ -57,6 +57,7 @@
   color: $dark;
   border-bottom: 1px solid $brown;
   cursor: pointer;
+  transition: $default-transition;
 
   &:focus,
   &:hover {
@@ -87,6 +88,7 @@
   background: none;
   border: none;
   cursor: pointer;
+  transition: $default-transition;
 
   &:focus,
   &:hover {
