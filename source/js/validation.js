@@ -24,6 +24,13 @@ const runFormWork = () => {
       if (!emailInput) {
         return;
       }
+
+      emailInput.addEventListener('focus', () => {
+        if (emailInput.hasAttribute('style')) {
+          removeError(emailInput);
+        }
+      });
+
       emailInput.addEventListener('blur', () => {
         if (emailInput.value.length === ZERO_VALUE) {
           removeError(emailInput);

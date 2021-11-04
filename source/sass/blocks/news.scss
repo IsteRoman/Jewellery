@@ -89,6 +89,7 @@
   border: none;
   cursor: pointer;
   transition: $default-transition;
+  outline: 0;
 
   &:focus,
   &:hover {

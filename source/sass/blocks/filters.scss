@@ -145,6 +145,7 @@
   border: none;
   border-left: 1px solid $brown;
   border-right: 1px solid $brown;
+  cursor: pointer;
 
   &:not(:last-of-type) {
     border-top: 1px solid $brown;

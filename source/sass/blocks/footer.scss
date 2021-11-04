@@ -202,6 +202,8 @@
   line-height: 0.67;
   color: $white;
   transition: $default-transition;
+  outline: 0;
+
 
   &:focus,
   &:hover {
@@ -242,6 +244,7 @@
   line-height: 0.67;
   color: $white;
   transition: $default-transition;
+  outline: 0;
 
   &:focus,
   &:hover {

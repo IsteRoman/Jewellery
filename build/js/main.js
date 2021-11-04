@@ -1,46 +1,6 @@
 /******/ (function() { // webpackBootstrap
 /******/ 	"use strict";
-/******/ 	// The require scope
-/******/ 	var __webpack_require__ = {};
-/******/ 	
-/************************************************************************/
-/******/ 	/* webpack/runtime/define property getters */
-/******/ 	!function() {
-/******/ 		// define getter functions for harmony exports
-/******/ 		__webpack_require__.d = function(exports, definition) {
-/******/ 			for(var key in definition) {
-/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
-/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
-/******/ 				}
-/******/ 			}
-/******/ 		};
-/******/ 	}();
-/******/ 	
-/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
-/******/ 	!function() {
-/******/ 		__webpack_require__.o = function(obj, prop) { return Object.prototype.hasOwnProperty.call(obj, prop); }
-/******/ 	}();
-/******/ 	
-/******/ 	/* webpack/runtime/make namespace object */
-/******/ 	!function() {
-/******/ 		// define __esModule on exports
-/******/ 		__webpack_require__.r = function(exports) {
-/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
-/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
-/******/ 			}
-/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
-/******/ 		};
-/******/ 	}();
-/******/ 	
-/************************************************************************/
 var __webpack_exports__ = {};
-
-// NAMESPACE OBJECT: ./source/js/menu.js
-var menu_namespaceObject = {};
-__webpack_require__.r(menu_namespaceObject);
-__webpack_require__.d(menu_namespaceObject, {
-  "W": function() { return runMenuWork; }
-});
 
 ;// CONCATENATED MODULE: ./source/js/start.js
 const body = document.querySelector('body');
@@ -56,13 +16,20 @@ const checkJS = () => {
 
 const ESC_CODE = 27;
 const menuButton = document.querySelector('.header__button');
+const search = document.querySelector('.header__search');
+const searchInput = search.querySelector('input');
 
 const toggleMenu = () => {
   if (!menuButton) {
     return;
   }
   menuButton.addEventListener('click', () => {
-    body.classList.toggle('menu-open');
+    if (!body.classList.contains('menu-open')) {
+      body.classList.add('menu-open');
+      searchInput.focus();
+    } else if (body.classList.contains('menu-open')) {
+      body.classList.remove('menu-open');
+    }
   });
 };
 
@@ -75,6 +42,9 @@ const closeMenuByEsc = () => {
 };
 
 const runMenuWork = () => {
+  if (!menuButton) {
+    return;
+  }
   toggleMenu();
   closeMenuByEsc();
 };
@@ -87,7 +57,7 @@ const runMenuWork = () => {
 
 const TAB_CODE = 9;
 const popupBlock = document.querySelector('.login');
-const buttonOpenModal = document.querySelector('.header__navigation-login');
+const buttonOpenModal = document.querySelector('.header__login');
 const popupForm = document.querySelector('.login__form');
 const buttonCloseModal = document.querySelector('.login__button-close');
 
@@ -99,7 +69,7 @@ const closeBlock = () => {
 const closeByOverlay = () => {
   if (body.classList.contains('popup--open')) {
     document.addEventListener('click', (e) => {
-      if (e.target.closest('.login') === null && e.target.closest('.header__navigation-login') === null) {
+      if (e.target.closest('.login') === null && e.target.closest('.header__login') === null) {
         closeBlock();
       }
     });
@@ -134,7 +104,7 @@ const openPopup = () => {
 
 const closeByEsc = () => {
   window.addEventListener('keydown', (evt) => {
-    if (evt.keyCode === menu_namespaceObject.ESC_CODE) {
+    if (evt.keyCode === ESC_CODE) {
       closeBlock();
     }
   });
@@ -187,6 +157,13 @@ const runFormWork = () => {
       if (!emailInput) {
         return;
       }
+
+      emailInput.addEventListener('focus', () => {
+        if (emailInput.hasAttribute('style')) {
+          removeError(emailInput);
+        }
+      });
+
       emailInput.addEventListener('blur', () => {
         if (emailInput.value.length === ZERO_VALUE) {
           removeError(emailInput);
@@ -298,7 +275,7 @@ const runFilterWork = () => {
 
   const closeEscFilter = () => {
     window.addEventListener('keydown', (evt) => {
-      if (evt.keyCode === menu_namespaceObject.ESC_CODE) {
+      if (evt.keyCode === ESC_CODE) {
         body.classList.remove('filter-open');
       }
     });

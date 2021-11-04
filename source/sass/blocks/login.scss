@@ -120,6 +120,7 @@
     background: none;
     outline: 0;
     transition: $default-transition;
+    border-radius: 0;
 
     &::placeholder {
       color: $gray;

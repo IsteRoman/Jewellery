@@ -2,7 +2,7 @@ import {body} from  './start.js';
 import {ESC_CODE} from  './menu.js';
 const TAB_CODE = 9;
 const popupBlock = document.querySelector('.login');
-const buttonOpenModal = document.querySelector('.header__navigation-login');
+const buttonOpenModal = document.querySelector('.header__login');
 const popupForm = document.querySelector('.login__form');
 const buttonCloseModal = document.querySelector('.login__button-close');
 
@@ -14,7 +14,7 @@ const closeBlock = () => {
 const closeByOverlay = () => {
   if (body.classList.contains('popup--open')) {
     document.addEventListener('click', (e) => {
-      if (e.target.closest('.login') === null && e.target.closest('.header__navigation-login') === null) {
+      if (e.target.closest('.login') === null && e.target.closest('.header__login') === null) {
         closeBlock();
       }
     });

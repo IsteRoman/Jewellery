@@ -3,13 +3,19 @@
   flex-direction: column;
   transition: $default-transition;
 
-  &:focus,
   &:hover {
     transform: scale(1.05);
   }
 
   &:active {
     opacity: 0.5;
+  }
+}
+
+.good__content {
+  &:focus {
+    transform: scale(1.05);
+    outline: 0;
   }
 }
 

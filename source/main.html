@@ -25,16 +25,26 @@
   </div>
   <header class="header">
     <div class="header__block wrapper">
-      <a class="header__logo header__logo--on-main-page" aria-label="Jewellery">
-        <svg class="header__logo-icon" width="66" height="66" viewBox="0 0 66 66">
-          <use href="#icon-logo"></use>
-        </svg>
-      </a>
+      <div class="header__search">
+        <label class="visually-hidden" for="search_field">Search field</label>
+        <input id="search_field" name="search-field" type="search" placeholder="Type here to search">
+        <button class="header__search-button" type="submit" aria-label="Search">
+          <svg class="header__search-button-icon" width="14" height="14" viewBox="0 0 14 14">
+            <use href="#icon-search"></use>
+          </svg>
+        </button>
+      </div>
       <button class="header__button" type="button" aria-label="Open menu">
         <svg class="header__button-icon" width="25" height="16" viewBox="0 0 25 18">
           <use href="#icon-menu"></use>
         </svg>
       </button>
+      <a class="header__logo header__logo--on-main-page" aria-label="Jewellery">
+        <svg class="header__logo-icon" width="66" height="66" viewBox="0 0 66 66">
+          <use href="#icon-logo"></use>
+        </svg>
+      </a>
+      <a class="header__login" href="login.html">Login</a>
       <a class="header__basket" href="#" aria-label="Open basket">
         <svg class="header__basket-icon" width="18" height="16" viewBox="0 0 20 18">
           <use href="#icon-basket"></use>
@@ -44,62 +54,50 @@
           <b>0</b>
         </div>
       </a>
-      <div class="header__navigation">
-        <div class="header__navigation-search">
-          <button class="header__navigation-search-button" type="submit" aria-label="Search">
-            <svg class="header__navigation-search-button-icon" width="14" height="14" viewBox="0 0 14 14">
-              <use href="#icon-search"></use>
-            </svg>
-          </button>
-          <label class="visually-hidden" for="search_field">Search field</label>
-          <input id="search_field" name="search-field" type="search" placeholder="Type here to search">
-        </div>
-        <ul class="header__navigation-nav-list">
-          <li class="header__navigation-nav-item">
-            <a class="header__navigation-nav-link" href="#">
-              What’s new
-            </a>
-          </li>
-          <li class="header__navigation-nav-item">
-            <a class="header__navigation-nav-link" href="catalog.html">
-              Chokers
-            </a>
-          </li>
-          <li class="header__navigation-nav-item">
-            <a class="header__navigation-nav-link" href="catalog.html">
-              Necklaces
-            </a>
-          </li>
-          <li class="header__navigation-nav-item">
-            <a class="header__navigation-nav-link" href="catalog.html">
-              Rings
-            </a>
-          </li>
-          <li class="header__navigation-nav-item">
-            <a class="header__navigation-nav-link" href="catalog.html">
-              Earrings
-            </a>
-          </li>
-        </ul>
-        <ul class="header__navigation-about-list">
-          <li class="header__navigation-about-item">
-            <a class="header__navigation-about-link" href="#">
-              About CH
-            </a>
-          </li>
-          <li class="header__navigation-about-item">
-            <a class="header__navigation-about-link" href="#">
-              Stores & Hours
-            </a>
-          </li>
-          <li class="header__navigation-about-item">
-            <a class="header__navigation-about-link" href="#">
-              Contact Us
-            </a>
-          </li>
-        </ul>
-        <a class="header__navigation-login" href="login.html">Login</a>
-      </div>
+      <ul class="header__navigation-list">
+        <li class="header__navigation-item">
+          <a class="header__navigation-link" href="#">
+            What’s new
+          </a>
+        </li>
+        <li class="header__navigation-item">
+          <a class="header__navigation-link" href="catalog.html">
+            Chokers
+          </a>
+        </li>
+        <li class="header__navigation-item">
+          <a class="header__navigation-link" href="catalog.html">
+            Necklaces
+          </a>
+        </li>
+        <li class="header__navigation-item">
+          <a class="header__navigation-link" href="catalog.html">
+            Rings
+          </a>
+        </li>
+        <li class="header__navigation-item">
+          <a class="header__navigation-link" href="catalog.html">
+            Earrings
+          </a>
+        </li>
+      </ul>
+      <ul class="header__about-list">
+        <li class="header__about-item">
+          <a class="header__about-link" href="#">
+            About CH
+          </a>
+        </li>
+        <li class="header__about-item">
+          <a class="header__about-link" href="#">
+            Stores & Hours
+          </a>
+        </li>
+        <li class="header__about-item">
+          <a class="header__about-link" href="#">
+            Contact Us
+          </a>
+        </li>
+      </ul>
     </div>
   </header>
   <main>
@@ -296,8 +294,8 @@
               </a>
             </div>
           </div>
-          <div class="swiper-pagination news__pagination"></div>
         </div>
+        <div class="swiper-pagination news__pagination"></div>
       </div>
     </section>
     <section class="blog">
