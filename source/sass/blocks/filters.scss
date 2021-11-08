@@ -131,7 +131,7 @@
 
     .filter-open & {
       position: absolute;
-      top: 60px;
+      top: 55px;
       right: 15px;
       display: inline-flex;
     }
@@ -141,11 +141,10 @@
 .filters__fieldset {
   position: relative;
   margin: 0;
-  padding: 24px 25px 23px 25px;
+  padding: 0;
   border: none;
   border-left: 1px solid $brown;
   border-right: 1px solid $brown;
-  cursor: pointer;
 
   &:not(:last-of-type) {
     border-top: 1px solid $brown;
@@ -159,11 +158,12 @@
   p {
     margin: 0;
     padding: 0;
+    padding: 24px 25px 23px 25px;
     line-height: 130%;
+    cursor: pointer;
   }
 
   @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
-    padding: 40px 40px;
     border-left: none;
     border-right: none;
 
@@ -172,12 +172,13 @@
     }
 
     p {
+      padding: 40px 40px;
       font-size: 18px;
     }
   }
 
   @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
-    padding: 29px 20px 26px 20px;
+    padding: 0 20px 0 20px;
     border-left: none;
     border-right: none;
 
@@ -186,6 +187,7 @@
     }
 
     p {
+      padding: 29px 20px 26px 20px;
       font-size: 18px;
     }
   }
@@ -263,13 +265,16 @@
 .filters__fieldset-checkbox-list {
   display: flex;
   flex-direction: column;
-  margin: 0;
-  margin-top: 21px;
+  margin: 0 25px 23px 25px;
   padding: 0;
   list-style: none;
 
+  @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
+    margin: 0 40px 40px 40px;
+  }
+
   @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
-    margin-top: 23px;
+    margin: 0 20px 26px 20px;
   }
 }
 
@@ -379,8 +384,16 @@
   display: flex;
   flex-direction: column;
   margin: 0;
-  margin-top: 19px;
+  margin: 0 25px 19px 25px;
   padding: 0;
+
+  @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
+    margin: 0 40px 19px 40px;
+  }
+
+  @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
+    margin: 0 20px 19px 20px;
+  }
 }
 
 .filters__price-controls {
