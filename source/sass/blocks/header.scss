@@ -181,11 +181,13 @@
 
   @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
     display: inline-flex;
+    margin-right: unset;
   }
 
   @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
     display: inline-flex;
     margin-top: 18px;
+    margin-right: unset;
   }
 }
 
@@ -210,15 +212,13 @@
   }
 
   @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
-    margin: 0;
-    margin-left: -5px;
+    margin: 0 auto 0 auto;
   }
 
   @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
     width: 52px;
     height: 52px;
-    margin: 0;
-    margin-left: -5px;
+    margin: 0 auto 0 auto;
   }
 }
 
@@ -247,6 +247,31 @@
   }
 }
 
+.header__user-links {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  width: 30%;
+  max-width: 300px;
+  margin-left: auto;
+
+  @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
+    order: 4;
+    margin-left: unset;
+    max-width: unset;
+    width: unset;
+  }
+
+  @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
+    order: 4;
+    margin-left: unset;
+    max-width: unset;
+    width: unset;
+  }
+}
+
 .header__login {
   margin-left: 35px;
   margin-top: 16px;
@@ -268,7 +293,6 @@
   @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
     display: none;
     order: 4;
-    width: 100%;
     margin: 0;
     margin-bottom: 50px;
     font-size: 18px;
@@ -285,6 +309,7 @@
     color: $white;
   }
 }
+
 
 .header__basket {
   display: flex;
@@ -503,8 +528,19 @@
       fill: $white;
     }
 
+    .header__user-links {
+      flex-direction: column;
+      width: 100%;
+    }
+
     .header__login {
       display: block;
+    }
+
+    .header__basket {
+      position: absolute;
+      top: -655px;
+      right: 0;
     }
 
     .header__basket-icon {
@@ -541,8 +577,19 @@
       fill: $white;
     }
 
+    .header__user-links {
+      flex-direction: column;
+      width: 100%;
+    }
+
     .header__login {
       display: block;
+    }
+
+    .header__basket {
+      position: absolute;
+      top: -600px;
+      right: 0;
     }
 
     .header__basket-icon {
@@ -588,8 +635,19 @@
       fill: $white;
     }
 
+    .header__user-links {
+      flex-direction: column;
+      width: 100%;
+    }
+
     .header__login {
       display: block;
+    }
+
+    .header__basket {
+      position: absolute;
+      top: -655px;
+      right: 0;
     }
 
     .header__basket-icon {
@@ -632,8 +690,19 @@
       fill: $white;
     }
 
+    .header__user-links {
+      flex-direction: column;
+      width: 100%;
+    }
+
     .header__login {
       display: block;
+    }
+
+    .header__basket {
+      position: absolute;
+      top: -600px;
+      right: 0;
     }
 
     .header__basket-icon {
