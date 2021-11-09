@@ -210,7 +210,6 @@ const runAccordionWork = (list) => {
 ;// CONCATENATED MODULE: ./source/js/filter.js
 
 
-
 const filter = document.querySelector('.filters');
 const MAX_LENGTH = 4;
 
@@ -291,7 +290,16 @@ const runFilterWork = () => {
     });
   };
 
-  runAccordionWork('fieldset');
+  const runAccordionWorkFliter = () => {
+    fieldsets.forEach((el) => {
+      const clickZone = el.children[1];
+      clickZone.addEventListener('click', () => {
+        el.classList.toggle('block--open');
+      });
+    });
+  };
+
+  runAccordionWorkFliter();
   stopCloseFilter();
   stopInput();
   openFilter();
@@ -11238,11 +11246,6 @@ core.use(modules);
 
 ;// CONCATENATED MODULE: ./source/js/slider.js
 
-const MAX_TABLET_WIDTH = 1023;
-const MIN_DESCTOP_WIDTH = 1024;
-const COST_NTH_NUMBER_NOT_DESCTOP = 2;
-const COST_NTH_NUMBER_DESCTOP = 4;
-
 
 const runSliderWork = () => {
   if (!document.querySelector('.swiper')) {
@@ -11256,11 +11259,6 @@ const runSliderWork = () => {
     slidesPerView: 2,
     slidesPerGroup: 2,
     centeredSlides: false,
-
-    keyboard: {
-      enabled: true,
-      onlyInViewport: false,
-    },
 
     pagination: {
       el: '.swiper-pagination',
@@ -11299,34 +11297,6 @@ const runSliderWork = () => {
       },
     },
   });
-
-  const useTabButton = () => {
-    const sliderBlock = document.querySelector('.news__slider-block')
-
-    const runTabFunction = (cost) => {
-      const skipElement = document.querySelectorAll(`.news__slider-item:nth-of-type(${cost}n)`)
-        skipElement.forEach((el) => {
-          el.classList.add('lastElement');
-        });
-
-        
-        sliderBlock.addEventListener('keydown', (evt) => {
-          const eventTarger = evt.target;
-          const eventTargerParentElement = eventTarger.parentElement;
-
-          if (evt.keyCode === 9 && eventTargerParentElement.classList.contains('lastElement')) {
-            swiper.slideNext();
-          }
-        });
-      }
-
-    if (window.matchMedia(`(min-width:${MIN_DESCTOP_WIDTH}px)`).matches) {
-      runTabFunction(COST_NTH_NUMBER_DESCTOP);
-    } else if (window.matchMedia(`(max-width:${MAX_TABLET_WIDTH}px)`).matches) {
-      runTabFunction(COST_NTH_NUMBER_NOT_DESCTOP);
-    }
-  }
-  useTabButton();
 };
 
 

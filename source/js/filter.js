@@ -1,6 +1,5 @@
 import {body} from  './start.js';
 import {ESC_CODE} from  './menu.js';
-import {runAccordionWork} from './accordion.js';
 const filter = document.querySelector('.filters');
 const MAX_LENGTH = 4;
 
@@ -81,7 +80,16 @@ const runFilterWork = () => {
     });
   };
 
-  runAccordionWork('fieldset');
+  const runAccordionWorkFliter = () => {
+    fieldsets.forEach((el) => {
+      const clickZone = el.children[1];
+      clickZone.addEventListener('click', () => {
+        el.classList.toggle('block--open');
+      });
+    });
+  };
+
+  runAccordionWorkFliter();
   stopCloseFilter();
   stopInput();
   openFilter();

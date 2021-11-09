@@ -197,8 +197,7 @@
   flex-shrink: 0;
   width: 66px;
   height: 66px;
-  margin: 0 0 0 21.5%;
-  margin-right: calc(55.5% - 250px);
+  margin: 0 auto 0 21.5%;
   transition: $default-transition;
 
   &:focus,
@@ -208,10 +207,6 @@
 
   &:active {
     opacity: 0.5;
-  }
-
-  @media (min-width: $desktop-width) and (max-width: $desktop-mid-width) {
-    margin-right: calc(55% - 300px);
   }
 
   @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
