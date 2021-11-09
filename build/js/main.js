@@ -11257,6 +11257,11 @@ const runSliderWork = () => {
     slidesPerGroup: 2,
     centeredSlides: false,
 
+    keyboard: {
+      enabled: true,
+      onlyInViewport: false,
+    },
+
     pagination: {
       el: '.swiper-pagination',
       clickable: 'true',
@@ -11296,13 +11301,15 @@ const runSliderWork = () => {
   });
 
   const useTabButton = () => {
-    const sliderBlock = document.querySelector('.news__slider')
+    const sliderBlock = document.querySelector('.news__slider-block')
 
     const runTabFunction = (cost) => {
       const skipElement = document.querySelectorAll(`.news__slider-item:nth-of-type(${cost}n)`)
         skipElement.forEach((el) => {
           el.classList.add('lastElement');
         });
+
+        
         sliderBlock.addEventListener('keydown', (evt) => {
           const eventTarger = evt.target;
           const eventTargerParentElement = eventTarger.parentElement;
