@@ -248,7 +248,6 @@
 }
 
 .header__user-links {
-  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -509,6 +508,7 @@
 .no-js {
   @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
     .header {
+      position: relative;
       background-color: $brown;
     }
 
@@ -539,8 +539,8 @@
 
     .header__basket {
       position: absolute;
-      top: -655px;
-      right: 0;
+      top: 30px;
+      right: 45px;
     }
 
     .header__basket-icon {
@@ -558,6 +558,7 @@
 
   @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
     .header {
+      position: relative;
       background-color: $brown;
     }
 
@@ -588,8 +589,8 @@
 
     .header__basket {
       position: absolute;
-      top: -600px;
-      right: 0;
+      top: 20px;
+      right: 15px;
     }
 
     .header__basket-icon {
@@ -631,6 +632,10 @@
       stroke: $white;
     }
 
+    .header__logo {
+      margin-right: 45%;
+    }
+
     .header__logo-icon {
       fill: $white;
     }
@@ -646,8 +651,8 @@
 
     .header__basket {
       position: absolute;
-      top: -655px;
-      right: 0;
+      top: 30px;
+      right: 45px;
     }
 
     .header__basket-icon {
@@ -686,6 +691,10 @@
       stroke: $white;
     }
 
+    .header__logo {
+      margin-right: 41%;
+    }
+
     .header__logo-icon {
       fill: $white;
     }
@@ -701,8 +710,8 @@
 
     .header__basket {
       position: absolute;
-      top: -600px;
-      right: 0;
+      top: 20px;
+      right: 15px;
     }
 
     .header__basket-icon {
